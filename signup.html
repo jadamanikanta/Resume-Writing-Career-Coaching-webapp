@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAREERLYN | Resume Writing & Career Coaching</title>
+    <link rel="icon" type="image/png" sizes="184x184" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+<main class="auth-page">
+
+    <div class="background-decoration">
+        <span class="career-path path-one"></span>
+        <span class="career-path path-two"></span>
+
+        <span class="resume-card resume-one">
+            <span class="resume-heading"></span>
+            <span class="resume-line line-long"></span>
+            <span class="resume-line line-medium"></span>
+            <span class="resume-line line-short"></span>
+        </span>
+
+        <span class="resume-card resume-two">
+            <span class="resume-heading"></span>
+            <span class="resume-line line-long"></span>
+            <span class="resume-line line-medium"></span>
+            <span class="resume-line line-short"></span>
+        </span>
+
+        <span class="career-node node-one"></span>
+        <span class="career-node node-two"></span>
+        <span class="career-node node-three"></span>
+
+        <span class="progress-track">
+            <span class="progress-fill"></span>
+        </span>
+
+        <span class="floating-check check-one">
+            <i data-lucide="check"></i>
+        </span>
+
+        <span class="floating-check check-two">
+            <i data-lucide="check"></i>
+        </span>
+
+        <span class="floating-arrow arrow-one">
+            <i data-lucide="arrow-up-right"></i>
+        </span>
+
+        <span class="floating-arrow arrow-two">
+            <i data-lucide="trending-up"></i>
+        </span>
+    </div>
+
+    <div class="auth-controls">
+        <button type="button" class="auth-control" id="themeToggle">
+            <i data-lucide="moon"></i>
+        </button>
+
+        <button type="button" class="auth-control rtl-control" id="rtlToggle">
+            <i data-lucide="arrow-left-right"></i>
+        </button>
+    </div>
+
+    <section class="signup-card">
+
+        <div class="card-glow"></div>
+
+        <div class="signup-logo">
+            <a href="index.html" class="careerlyn-logo" aria-label="CAREERLYN Home">
+
+    <div class="logo-badge">
+        <img
+            src="logo.png"
+            alt="CAREERLYN Emblem"
+            class="brand-logo-img"
+        >
+    </div>
+
+    <div class="logo-text-group">
+        <span class="logo-brand-title">
+            CAREER<span class="brand-lyn">LYN</span>
+        </span>
+
+        <span class="logo-brand-subtitle">
+            RESUME &amp; CAREER COACHING
+        </span>
+    </div>
+
+</a>
+        </div>
+
+        <div class="signup-heading">
+            <span class="signup-eyebrow">CLIENT PORTAL</span>
+            <h1>Create Your Account</h1>
+            <p>Start your career journey and keep your resume projects, coaching sessions and progress in one place.</p>
+        </div>
+
+        <form class="signup-form" id="signupForm">
+
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <div class="input-wrapper">
+                    <i data-lucide="user-round"></i>
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-wrapper">
+                    <i data-lucide="mail"></i>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="lock-keyhole"></i>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create password"
+                            autocomplete="new-password"
+                            required
+                        >
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="passwordToggle"
+                            aria-label="Show password"
+                        >
+                            <i data-lucide="eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-wrapper">
+                        <i data-lucide="shield-check"></i>
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm password"
+                            autocomplete="new-password"
+                            required
+                        >
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="confirmPasswordToggle"
+                            aria-label="Show password"
+                        >
+                            <i data-lucide="eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <label class="terms-option">
+                <input type="checkbox" id="terms" required>
+                <span class="custom-checkbox"></span>
+                <span>
+                    I agree to the
+                    <a href="#" class="terms-link">Terms & Conditions</a>
+                    and
+                    <a href="#" class="terms-link">Privacy Policy</a>
+                </span>
+            </label>
+
+            <button type="submit" class="signup-btn">
+                <span>Create Account</span>
+                <i data-lucide="arrow-right"></i>
+            </button>
+
+        </form>
+
+        <div class="divider">
+            <span>OR SIGN UP WITH</span>
+        </div>
+
+        <div class="social-login">
+
+            <button type="button" class="social-btn">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="#4285F4" d="M21.35 12.23c0-.71-.06-1.4-.18-2.05H12v3.88h5.22a4.46 4.46 0 0 1-1.94 2.93v2.43h3.14c1.84-1.7 2.93-4.21 2.93-7.19Z"/>
+                    <path fill="#34A853" d="M12 21.75c2.63 0 4.84-.87 6.45-2.36l-3.14-2.43c-.87.58-1.98.92-3.31.92-2.54 0-4.7-1.72-5.47-4.03H3.28v2.5A9.75 9.75 0 0 0 12 21.75Z"/>
+                    <path fill="#FBBC05" d="M6.53 13.85A5.86 5.86 0 0 1 6.22 12c0-.64.11-1.26.31-1.85v-2.5H3.28A9.75 9.75 0 0 0 2.25 12c0 1.57.38 3.06 1.03 4.35l3.25-2.5Z"/>
+                    <path fill="#EA4335" d="M12 6.12c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.21 14.63 2.25 12 2.25a9.75 9.75 0 0 0-8.72 5.4l3.25 2.5C7.3 7.84 9.46 6.12 12 6.12Z"/>
+                </svg>
+                <span>Google</span>
+            </button>
+
+            <button type="button" class="social-btn">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M17.05 12.54c-.02-2.06 1.68-3.05 1.76-3.1-.96-1.4-2.46-1.59-2.99-1.61-1.27-.13-2.5.75-3.14.75-.65 0-1.64-.73-2.7-.71-1.39.02-2.68.81-3.39 2.05-1.46 2.52-.37 6.23 1.04 8.27.7 1 1.52 2.12 2.6 2.08 1.04-.04 1.43-.67 2.69-.67 1.25 0 1.61.67 2.69.65 1.12-.02 1.83-1.01 2.51-2.02.79-1.16 1.12-2.29 1.14-2.35-.03-.01-2.19-.84-2.21-3.34ZM14.97 6.48c.57-.69.95-1.65.84-2.61-.82.03-1.81.55-2.4 1.23-.52.6-.98 1.57-.86 2.5.91.07 1.84-.46 2.42-1.12Z"/>
+                </svg>
+                <span>Apple</span>
+            </button>
+
+            <button type="button" class="social-btn">
+                 <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path fill="#0A66C2" d="M5.2 3.8A2.2 2.2 0 1 1 5.2 8.2a2.2 2.2 0 0 1 0-4.4ZM3.3 9.7h3.8V21H3.3V9.7ZM9.5 9.7h3.6v1.55h.05c.5-.95 1.72-1.95 3.54-1.95 3.79 0 4.49 2.49 4.49 5.72V21h-3.8v-5.3c0-1.26-.02-2.88-1.76-2.88-1.76 0-2.03 1.38-2.03 2.79V21H9.5V9.7Z"/>
+</svg>
+                <span>LinkedIn</span>
+            </button>
+
+        </div>
+
+        <p class="login-text">
+            Already have an account?
+            <a href="login.html">Sign in</a>
+        </p>
+
+    </section>
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const body = document.body;
+    const html = document.documentElement;
+
+    const themeToggle = document.getElementById("themeToggle");
+    const rtlToggle = document.getElementById("rtlToggle");
+    const passwordToggle = document.getElementById("passwordToggle");
+    const passwordInput = document.getElementById("password");
+    const loginForm = document.getElementById("loginForm");
+    const rememberMe = document.getElementById("rememberMe");
+
+    const savedTheme = localStorage.getItem("careerLift-theme");
+
+    if (savedTheme === "dark") {
+        body.classList.add("dark-mode");
+    }
+
+    const savedDirection =
+        localStorage.getItem("careerLift-direction") || "ltr";
+
+    html.setAttribute("dir", savedDirection);
+
+    function refreshIcons() {
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    }
+
+    function updateThemeIcon() {
+
+        if (!themeToggle) return;
+
+        const icon = body.classList.contains("dark-mode")
+            ? "sun"
+            : "moon";
+
+        themeToggle.innerHTML =
+            `<i data-lucide="${icon}"></i>`;
+
+        refreshIcons();
+    }
+
+    function updateDirection() {
+
+        const direction =
+            html.getAttribute("dir") || "ltr";
+
+        if (rtlToggle) {
+    rtlToggle.innerHTML =
+        '<i data-lucide="arrow-left-right"></i>';
+
+    refreshIcons();
+}
+    }
+
+    function loadRememberMe() {
+
+        if (!rememberMe) return;
+
+        rememberMe.checked =
+            localStorage.getItem("rememberMe") === "true";
+    }
+
+    themeToggle?.addEventListener("click", () => {
+
+        body.classList.toggle("dark-mode");
+
+        const isDark =
+            body.classList.contains("dark-mode");
+
+        localStorage.setItem(
+            "careerLift-theme",
+            isDark ? "dark" : "light"
+        );
+
+        updateThemeIcon();
+    });
+
+    rtlToggle?.addEventListener("click", () => {
+
+        const currentDirection =
+            html.getAttribute("dir") || "ltr";
+
+        const newDirection =
+            currentDirection === "ltr"
+                ? "rtl"
+                : "ltr";
+
+        html.setAttribute("dir", newDirection);
+
+        localStorage.setItem(
+            "careerLift-direction",
+            newDirection
+        );
+
+        updateDirection();
+    });
+
+    passwordToggle?.addEventListener("click", () => {
+
+        if (!passwordInput) return;
+
+        const showPassword =
+            passwordInput.type === "password";
+
+        passwordInput.type =
+            showPassword ? "text" : "password";
+
+        passwordToggle.innerHTML =
+            `<i data-lucide="${showPassword ? "eye-off" : "eye"}"></i>`;
+
+        passwordToggle.setAttribute(
+            "aria-label",
+            showPassword
+                ? "Hide password"
+                : "Show password"
+        );
+
+        refreshIcons();
+    });
+
+    rememberMe?.addEventListener("change", () => {
+
+        localStorage.setItem(
+            "rememberMe",
+            rememberMe.checked ? "true" : "false"
+        );
+    });
+
+    loginForm?.addEventListener("submit", event => {
+
+        event.preventDefault();
+
+        const email =
+            document.getElementById("email")?.value.trim();
+
+        const password =
+            document.getElementById("password")?.value.trim();
+
+        if (!email || !password) return;
+
+        window.location.href = "dashboard.html";
+    });
+
+    loadRememberMe();
+    updateDirection();
+    refreshIcons();
+    updateThemeIcon();
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 | CAREERLYN</title>
+    <link rel="icon" type="image/png" sizes="184x184" href="logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --primary: #1554C7;
+            --secondary: #00BFEF;
+
+            --bg-color: #F8FAFC;
+            --text-color: #0F172A;
+
+            --card-bg: #FFFFFF;
+            --border-color: rgba(21, 84, 199, 0.14);
+
+            --primary-light: rgba(21, 84, 199, 0.10);
+            --secondary-light: rgba(0, 191, 239, 0.10);
+
+            --heading-color: #111827;
+            --text-light: #64748B;
+
+            --font-heading: "Plus Jakarta Sans", sans-serif;
+            --font-body: "Plus Jakarta Sans", sans-serif;
+
+            --transition-fast: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        body.dark-mode {
+            --primary: #2878E8;
+            --secondary: #19D3FF;
+
+            --bg-color: #050811;
+            --text-color: #F8FAFC;
+
+            --card-bg: #090F1E;
+            --border-color: rgba(40, 120, 232, 0.20);
+
+            --primary-light: rgba(40, 120, 232, 0.16);
+            --secondary-light: rgba(25, 211, 255, 0.12);
+
+            --heading-color: #F8FAFC;
+            --text-light: #94A3B8;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            color: var(--text-color);
+            background: var(--bg-color);
+            font-family: var(--font-body);
+            transition: var(--transition-fast);
+        }
+
+        a,
+        button {
+            font-family: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .error-page {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 500px;
+            padding: 72px 20px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .error-controls {
+            position: fixed;
+            top: 18px;
+            right: 20px;
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .error-control-btn {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--heading-color);
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            transition: var(--transition-fast);
+        }
+
+        .error-control-btn:hover {
+            color: #FFFFFF;
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .error-control-btn svg {
+            width: 17px;
+            height: 17px;
+        }
+
+        .careerlyn-404-card {
+            position: relative;
+            width: min(650px, 100%);
+            max-height: calc(100vh - 92px);
+            padding: 27px 42px 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 55px rgba(15, 23, 42, 0.08);
+            overflow: hidden;
+        }
+
+        body.dark-mode .careerlyn-404-card {
+            box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35);
+        }
+
+        .careerlyn-404-card::before {
+            content: "";
+            position: absolute;
+            width: 230px;
+            height: 230px;
+            top: -140px;
+            left: -140px;
+            border: 1px solid var(--primary-light);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .careerlyn-404-card::after {
+            content: "";
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            right: -160px;
+            bottom: -160px;
+            border: 1px solid var(--secondary-light);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .careerlyn-404-logo {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            text-decoration: none;
+        }
+
+        .careerlyn-404-logo-badge {
+            width: 43px;
+            height: 43px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .careerlyn-404-logo-img {
+            width: 40px;
+            height: 40px;
+            display: block;
+            object-fit: contain;
+        }
+
+        .careerlyn-404-logo-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 3px;
+        }
+
+        .careerlyn-404-logo-title {
+            color: var(--primary);
+            font-family: var(--font-heading);
+            font-size: 23px;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -0.7px;
+            white-space: nowrap;
+        }
+
+        .careerlyn-404-logo-title span {
+            color: var(--secondary);
+        }
+
+        .careerlyn-404-logo-subtitle {
+            color: var(--secondary);
+            font-family: var(--font-body);
+            font-size: 7px;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: 1.35px;
+            white-space: nowrap;
+        }
+
+        .careerlyn-404-number {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            margin: 7px 0 15px;
+            color: var(--primary);
+            font-family: var(--font-heading);
+            font-size: clamp(85px, 10vw, 125px);
+            font-weight: 800;
+            line-height: 0.72;
+            letter-spacing: -8px;
+        }
+
+        .careerlyn-404-circle {
+            width: clamp(76px, 9vw, 105px);
+            height: clamp(76px, 9vw, 105px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border-radius: 50%;
+            color: #FFFFFF;
+            background: var(--primary);
+            box-shadow:
+                0 0 0 9px var(--primary-light),
+                0 15px 30px rgba(21, 84, 199, 0.17);
+            letter-spacing: 0;
+        }
+
+        .careerlyn-404-circle svg {
+            width: 34px;
+            height: 34px;
+        }
+
+        .careerlyn-404-divider {
+            position: relative;
+            z-index: 2;
+            width: 45px;
+            height: 2px;
+            margin-bottom: 12px;
+            background: linear-gradient(
+                90deg,
+                var(--primary),
+                var(--secondary)
+            );
+        }
+
+        .careerlyn-404-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .careerlyn-404-tag {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--primary);
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+        }
+
+        .careerlyn-404-content h1 {
+            max-width: 530px;
+            margin: 0 auto 11px;
+            color: var(--heading-color);
+            font-family: var(--font-heading);
+            font-size: clamp(29px, 3.4vw, 41px);
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -1.3px;
+        }
+
+        .careerlyn-404-content h1 span {
+            display: block;
+            color: var(--primary);
+        }
+
+        .careerlyn-404-content p {
+            max-width: 500px;
+            margin: 0 auto 17px;
+            color: var(--text-light);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .careerlyn-404-actions {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            flex-wrap: wrap;
+        }
+
+        .careerlyn-404-primary,
+        .careerlyn-404-secondary {
+            min-height: 41px;
+            padding: 0 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 750;
+            transition: var(--transition-fast);
+        }
+
+        .careerlyn-404-primary {
+            color: #FFFFFF;
+            background: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .careerlyn-404-primary:hover {
+            color: #FFFFFF;
+            background: var(--secondary);
+            border-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .careerlyn-404-secondary {
+            color: var(--primary);
+            background: transparent;
+            border: 1px solid var(--primary);
+        }
+
+        .careerlyn-404-secondary:hover {
+            color: #FFFFFF;
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .careerlyn-404-actions svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .careerlyn-404-links {
+            position: relative;
+            z-index: 2;
+            margin-top: 17px;
+            padding-top: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .careerlyn-404-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 700;
+            transition: var(--transition-fast);
+        }
+
+        .careerlyn-404-links a:hover {
+            color: var(--primary);
+        }
+
+        .careerlyn-404-links svg {
+            width: 13px;
+            height: 13px;
+            color: var(--primary);
+        }
+
+        html[dir="rtl"] .error-controls {
+            right: auto;
+            left: 20px;
+        }
+
+        html[dir="rtl"] .careerlyn-404-card {
+            direction: rtl;
+        }
+
+        html[dir="rtl"] .careerlyn-404-logo-text {
+            align-items: flex-start;
+        }
+
+        html[dir="rtl"] .careerlyn-404-primary svg {
+            transform: scaleX(-1);
+        }
+
+        @media (max-width: 768px) {
+
+            .error-page {
+                padding: 68px 16px 15px;
+            }
+
+            .error-controls {
+                top: 14px;
+                right: 16px;
+            }
+
+            html[dir="rtl"] .error-controls {
+                right: auto;
+                left: 16px;
+            }
+
+            .error-control-btn {
+                width: 38px;
+                height: 38px;
+            }
+
+            .careerlyn-404-card {
+                width: min(600px, 100%);
+                max-height: calc(100vh - 83px);
+                padding: 23px 28px 21px;
+            }
+
+            .careerlyn-404-logo {
+                margin-bottom: 10px;
+            }
+
+            .careerlyn-404-number {
+                font-size: 92px;
+                gap: 5px;
+                letter-spacing: -6px;
+                margin-top: 5px;
+                margin-bottom: 13px;
+            }
+
+            .careerlyn-404-circle {
+                width: 75px;
+                height: 75px;
+                box-shadow:
+                    0 0 0 8px var(--primary-light),
+                    0 13px 25px rgba(21, 84, 199, 0.15);
+            }
+
+            .careerlyn-404-circle svg {
+                width: 29px;
+                height: 29px;
+            }
+
+            .careerlyn-404-content h1 {
+                font-size: 31px;
+            }
+
+            .careerlyn-404-content p {
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .error-page {
+                padding: 62px 10px 10px;
+            }
+
+            .error-controls {
+                top: 11px;
+                right: 10px;
+                gap: 5px;
+            }
+
+            html[dir="rtl"] .error-controls {
+                right: auto;
+                left: 10px;
+            }
+
+            .error-control-btn {
+                width: 35px;
+                height: 35px;
+            }
+
+            .error-control-btn svg {
+                width: 15px;
+                height: 15px;
+            }
+
+            .careerlyn-404-card {
+                max-height: calc(100vh - 72px);
+                padding: 19px 16px 17px;
+            }
+
+            .careerlyn-404-logo {
+                gap: 7px;
+                margin-bottom: 8px;
+            }
+
+            .careerlyn-404-logo-badge {
+                width: 36px;
+                height: 36px;
+            }
+
+            .careerlyn-404-logo-img {
+                width: 34px;
+                height: 34px;
+            }
+
+            .careerlyn-404-logo-title {
+                font-size: 19px;
+                letter-spacing: -0.5px;
+            }
+
+            .careerlyn-404-logo-subtitle {
+                font-size: 5px;
+                letter-spacing: 1px;
+            }
+
+            .careerlyn-404-number {
+                font-size: 69px;
+                gap: 4px;
+                letter-spacing: -5px;
+                margin-top: 3px;
+                margin-bottom: 10px;
+            }
+
+            .careerlyn-404-circle {
+                width: 57px;
+                height: 57px;
+                box-shadow:
+                    0 0 0 6px var(--primary-light),
+                    0 10px 20px rgba(21, 84, 199, 0.13);
+            }
+
+            .careerlyn-404-circle svg {
+                width: 22px;
+                height: 22px;
+            }
+
+            .careerlyn-404-divider {
+                width: 38px;
+                margin-bottom: 9px;
+            }
+
+            .careerlyn-404-tag {
+                margin-bottom: 6px;
+                font-size: 8px;
+                letter-spacing: 1.2px;
+            }
+
+            .careerlyn-404-content h1 {
+                margin-bottom: 8px;
+                font-size: 25px;
+                letter-spacing: -0.8px;
+            }
+
+            .careerlyn-404-content p {
+                margin-bottom: 12px;
+                font-size: 11px;
+                line-height: 1.5;
+            }
+
+            .careerlyn-404-primary,
+            .careerlyn-404-secondary {
+                min-height: 37px;
+                padding: 0 13px;
+                font-size: 10px;
+            }
+
+            .careerlyn-404-actions svg {
+                width: 13px;
+                height: 13px;
+            }
+
+            .careerlyn-404-links {
+                margin-top: 12px;
+                padding-top: 9px;
+                gap: 13px;
+            }
+
+            .careerlyn-404-links a {
+                font-size: 9px;
+            }
+
+            .careerlyn-404-links svg {
+                width: 11px;
+                height: 11px;
+            }
+        }
+
+        @media (max-width: 360px) {
+
+            .error-page {
+                padding: 57px 8px 8px;
+            }
+
+            .careerlyn-404-card {
+                max-height: calc(100vh - 65px);
+                padding: 15px 12px 14px;
+            }
+
+            .careerlyn-404-logo {
+                gap: 6px;
+                margin-bottom: 5px;
+            }
+
+            .careerlyn-404-logo-badge {
+                width: 32px;
+                height: 32px;
+            }
+
+            .careerlyn-404-logo-img {
+                width: 30px;
+                height: 30px;
+            }
+
+            .careerlyn-404-logo-title {
+                font-size: 17px;
+            }
+
+            .careerlyn-404-logo-subtitle {
+                font-size: 4px;
+                letter-spacing: 0.8px;
+            }
+
+            .careerlyn-404-number {
+                font-size: 59px;
+                gap: 3px;
+                letter-spacing: -4px;
+                margin-bottom: 8px;
+            }
+
+            .careerlyn-404-circle {
+                width: 49px;
+                height: 49px;
+            }
+
+            .careerlyn-404-circle svg {
+                width: 19px;
+                height: 19px;
+            }
+
+            .careerlyn-404-divider {
+                width: 32px;
+                margin-bottom: 7px;
+            }
+
+            .careerlyn-404-content h1 {
+                font-size: 22px;
+            }
+
+            .careerlyn-404-content p {
+                font-size: 10px;
+                line-height: 1.45;
+                margin-bottom: 10px;
+            }
+
+            .careerlyn-404-primary,
+            .careerlyn-404-secondary {
+                min-height: 34px;
+                padding: 0 11px;
+                font-size: 9px;
+            }
+
+            .careerlyn-404-links {
+                margin-top: 9px;
+                padding-top: 7px;
+                gap: 9px;
+            }
+
+            .careerlyn-404-links a {
+                font-size: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="error-controls">
+
+        <button
+            class="error-control-btn"
+            id="directionToggle"
+            type="button"
+            aria-label="Toggle RTL and LTR"
+            title="Toggle RTL / LTR"
+        >
+            <i data-lucide="arrow-left-right"></i>
+        </button>
+
+        <button
+            class="error-control-btn"
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle Light and Dark Mode"
+            title="Toggle Light / Dark Mode"
+        >
+            <i data-lucide="moon"></i>
+        </button>
+
+    </div>
+
+
+    <main class="error-page">
+
+        <section class="careerlyn-404-card">
+
+            <a
+                href="index.html"
+                class="careerlyn-404-logo"
+                aria-label="CAREERLYN Home"
+            >
+
+                <div class="careerlyn-404-logo-badge">
+                    <img
+                        src="logo.png"
+                        alt="CAREERLYN Emblem"
+                        class="careerlyn-404-logo-img"
+                    >
+                </div>
+
+                <div class="careerlyn-404-logo-text">
+
+                    <span class="careerlyn-404-logo-title">
+                        CAREER<span>LYN</span>
+                    </span>
+
+                    <span class="careerlyn-404-logo-subtitle">
+                        RESUME &amp; CAREER COACHING
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <div class="careerlyn-404-number">
+
+                <span>4</span>
+
+                <div class="careerlyn-404-circle">
+                    <i data-lucide="compass"></i>
+                </div>
+
+                <span>4</span>
+
+            </div>
+
+
+            <div class="careerlyn-404-divider"></div>
+
+
+            <div class="careerlyn-404-content">
+
+                <span class="careerlyn-404-tag">
+                    PAGE NOT FOUND
+                </span>
+
+                <h1>
+                    Looks Like This
+                    <span>Career Path Took A Detour.</span>
+                </h1>
+
+                <p>
+                    The page you're looking for may have moved, been removed,
+                    or the address may not be correct. Let's get you back on
+                    the right path.
+                </p>
+
+                <div class="careerlyn-404-actions">
+
+                    <a
+                        href="index.html"
+                        class="careerlyn-404-primary"
+                    >
+                        Back To Home
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                    <a
+                        href="contact.html"
+                        class="careerlyn-404-secondary"
+                    >
+                        Contact CAREERLYN
+                        <i data-lucide="message-circle"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="careerlyn-404-links">
+
+                    <a href="services.html">
+                        <i data-lucide="briefcase-business"></i>
+                        Services
+                    </a>
+
+                    <a href="pricing.html">
+                        <i data-lucide="badge-dollar-sign"></i>
+                        Pricing
+                    </a>
+
+                    <a href="coaches.html">
+                        <i data-lucide="users"></i>
+                        Coaches
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const body = document.body;
+            const html = document.documentElement;
+
+            const themeToggle =
+                document.getElementById("themeToggle");
+
+            const directionToggle =
+                document.getElementById("directionToggle");
+
+            const savedTheme =
+                localStorage.getItem("careerLift-theme");
+
+            const savedDirection =
+                localStorage.getItem("careerLift-direction") || "ltr";
+
+
+            if (savedTheme === "dark") {
+                body.classList.add("dark-mode");
+            }
+
+
+            html.setAttribute("dir", savedDirection);
+
+
+            function updateThemeIcon() {
+
+                const icon =
+                    body.classList.contains("dark-mode")
+                        ? "sun"
+                        : "moon";
+
+                themeToggle.innerHTML =
+                    `<i data-lucide="${icon}"></i>`;
+
+                lucide.createIcons();
+            }
+
+
+            themeToggle.addEventListener("click", () => {
+
+                body.classList.toggle("dark-mode");
+
+                const isDark =
+                    body.classList.contains("dark-mode");
+
+                localStorage.setItem(
+                    "careerLift-theme",
+                    isDark ? "dark" : "light"
+                );
+
+                updateThemeIcon();
+            });
+
+
+            directionToggle.addEventListener("click", () => {
+
+                const currentDirection =
+                    html.getAttribute("dir") || "ltr";
+
+                const newDirection =
+                    currentDirection === "ltr"
+                        ? "rtl"
+                        : "ltr";
+
+                html.setAttribute("dir", newDirection);
+
+                localStorage.setItem(
+                    "careerLift-direction",
+                    newDirection
+                );
+            });
+
+
+            lucide.createIcons();
+            updateThemeIcon();
+
+        });
+    </script>
+
+</body>
+
+</html>

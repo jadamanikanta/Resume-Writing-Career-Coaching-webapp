@@ -1,0 +1,2989 @@
+.home-section-tag {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--primary);
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.careerlyn-pricing-hero {
+    position: relative;
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.careerlyn-pricing-hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.careerlyn-pricing-hero-background img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    animation: careerlynPricingHeroZoom 12s ease-in-out infinite alternate;
+}
+
+.careerlyn-pricing-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 8, 17, 0.62),
+            rgba(5, 8, 17, 0.78)
+        );
+}
+
+.careerlyn-pricing-hero-container {
+    position: relative;
+    z-index: 2;
+    width: min(var(--container-width), calc(100% - 48px));
+    min-height: 78vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.careerlyn-pricing-hero-content {
+    width: min(780px, 100%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.careerlyn-pricing-hero-content .home-section-tag {
+    margin-bottom: 20px;
+    color: var(--secondary);
+}
+
+.careerlyn-pricing-hero-content h1 {
+    margin-bottom: 24px;
+    color: #FFFFFF;
+    font-size: clamp(46px, 6vw, 76px);
+    line-height: 1.02;
+    letter-spacing: -2.5px;
+    font-weight: 800;
+}
+
+.careerlyn-pricing-hero-content h1 span {
+    display: block;
+    color: var(--secondary);
+}
+
+.careerlyn-pricing-hero-content p {
+    width: min(620px, 100%);
+    margin: 0 auto 32px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: var(--body-lg);
+    line-height: 1.75;
+}
+
+.careerlyn-pricing-hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.careerlyn-pricing-hero-primary,
+.careerlyn-pricing-hero-secondary {
+    min-height: 50px;
+    padding: 0 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-hero-primary {
+    color: #FFFFFF;
+    background: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.careerlyn-pricing-hero-primary:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.careerlyn-pricing-hero-secondary {
+    color: #FFFFFF;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.careerlyn-pricing-hero-secondary:hover {
+    color: #FFFFFF;
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.careerlyn-pricing-hero-primary svg,
+.careerlyn-pricing-hero-secondary svg {
+    width: 16px;
+    height: 16px;
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-hero-primary:hover svg {
+    transform: translateY(3px);
+}
+
+@keyframes careerlynPricingHeroZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.06);
+    }
+}
+
+[dir="rtl"] .careerlyn-pricing-hero,
+body.rtl .careerlyn-pricing-hero {
+    direction: rtl;
+}
+
+[dir="rtl"] .careerlyn-pricing-hero-content,
+body.rtl .careerlyn-pricing-hero-content {
+    text-align: center;
+}
+
+[dir="rtl"] .careerlyn-pricing-hero-primary:hover svg,
+body.rtl .careerlyn-pricing-hero-primary:hover svg {
+    transform: translateY(3px);
+}
+
+@media (max-width: 1024px) {
+
+    .careerlyn-pricing-hero {
+        min-height: 70vh;
+    }
+
+    .careerlyn-pricing-hero-container {
+        min-height: 70vh;
+    }
+
+    .careerlyn-pricing-hero-content {
+        width: min(700px, 100%);
+    }
+
+    .careerlyn-pricing-hero-content h1 {
+        font-size: clamp(42px, 6vw, 64px);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .careerlyn-pricing-hero {
+        min-height: 68vh;
+    }
+
+    .careerlyn-pricing-hero-container {
+        width: min(100% - 36px, var(--container-width));
+        min-height: 68vh;
+    }
+
+    .careerlyn-pricing-hero-content h1 {
+        font-size: clamp(38px, 8vw, 56px);
+        letter-spacing: -1.8px;
+    }
+
+    .careerlyn-pricing-hero-content p {
+        font-size: 14px;
+    }
+
+    .careerlyn-pricing-hero-background img {
+        object-position: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .careerlyn-pricing-hero {
+        min-height: 620px;
+    }
+
+    .careerlyn-pricing-hero-container {
+        width: calc(100% - 28px);
+        min-height: 620px;
+    }
+
+    .careerlyn-pricing-hero-content h1 {
+        font-size: clamp(34px, 10vw, 46px);
+        letter-spacing: -1.4px;
+    }
+
+    .careerlyn-pricing-hero-content p {
+        width: 100%;
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .careerlyn-pricing-hero-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .careerlyn-pricing-hero-primary,
+    .careerlyn-pricing-hero-secondary {
+        width: 100%;
+        min-height: 46px;
+    }
+
+    .careerlyn-pricing-hero-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(5, 8, 17, 0.68),
+                rgba(5, 8, 17, 0.84)
+            );
+    }
+}
+
+@media (max-width: 360px) {
+
+    .careerlyn-pricing-hero {
+        min-height: 580px;
+    }
+
+    .careerlyn-pricing-hero-container {
+        width: calc(100% - 22px);
+        min-height: 580px;
+    }
+
+    .careerlyn-pricing-hero-content h1 {
+        font-size: 31px;
+    }
+
+    .careerlyn-pricing-hero-content p {
+        font-size: 10px;
+    }
+
+    .careerlyn-pricing-hero-primary,
+    .careerlyn-pricing-hero-secondary {
+        font-size: 9px;
+    }
+}
+
+.careerlyn-pricing-packages {
+    width: 100%;
+    padding: 90px 0;
+    background: var(--card-bg);
+}
+
+.careerlyn-pricing-packages-container {
+    width: min(var(--container-width), calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.careerlyn-pricing-packages-header {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.careerlyn-pricing-packages-header .home-section-tag {
+    margin-bottom: 16px;
+}
+
+.careerlyn-pricing-packages-header h2 {
+    margin-bottom: 18px;
+}
+
+.careerlyn-pricing-packages-header h2 span {
+    display: block;
+    color: var(--primary);
+}
+
+.careerlyn-pricing-packages-header p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.careerlyn-pricing-packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.careerlyn-pricing-package {
+    position: relative;
+    padding: 32px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-package:hover {
+    border-color: var(--primary);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+.careerlyn-pricing-package-featured {
+    border-color: var(--primary);
+    box-shadow: 0 18px 45px rgba(21, 84, 199, 0.10);
+}
+
+.careerlyn-pricing-package-badge {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    padding: 7px 12px;
+    color: #FFFFFF;
+    background: var(--primary);
+    font-family: var(--font-body);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.careerlyn-pricing-package-top {
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.careerlyn-pricing-package-number {
+    color: var(--border-color);
+    font-family: var(--font-heading);
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.careerlyn-pricing-package-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: var(--primary-light);
+}
+
+.careerlyn-pricing-package-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.careerlyn-pricing-package-heading {
+    margin-bottom: 25px;
+}
+
+.careerlyn-pricing-package-heading > span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.careerlyn-pricing-package-heading h3 {
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+
+.careerlyn-pricing-package-heading p {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.careerlyn-pricing-package-price {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.careerlyn-pricing-package-price strong {
+    color: var(--heading-color);
+    font-family: var(--font-heading);
+    font-size: 34px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.careerlyn-pricing-package-price span {
+    margin-top: 7px;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.careerlyn-pricing-package-meta {
+    padding: 17px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.careerlyn-pricing-package-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.careerlyn-pricing-package-meta svg {
+    width: 14px;
+    height: 14px;
+    color: var(--primary);
+}
+
+.careerlyn-pricing-package-list {
+    margin: 0 0 28px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    list-style: none;
+}
+
+.careerlyn-pricing-package-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.careerlyn-pricing-package-list li svg {
+    width: 15px;
+    height: 15px;
+    flex: 0 0 auto;
+    margin-top: 1px;
+    color: var(--secondary);
+}
+
+.careerlyn-pricing-package-button {
+    min-height: 46px;
+    margin-top: auto;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--primary);
+    background: transparent;
+    border: 1px solid var(--primary);
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-package-featured-button{
+    color: #FFFFFF;
+    background: var(--primary);
+}
+
+.careerlyn-pricing-package-featured-button:hover{
+    
+    background: var(--secondary);
+}
+
+.careerlyn-pricing-package-button:hover {
+    background: var(--primary);
+    color: #FFFFFF;
+    
+}
+
+.careerlyn-pricing-package-button svg {
+    width: 15px;
+    height: 15px;
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-package-button:hover svg {
+    transform: translate(3px, -3px);
+}
+
+[dir="rtl"] .careerlyn-pricing-packages,
+body.rtl .careerlyn-pricing-packages {
+    direction: rtl;
+}
+
+[dir="rtl"] .careerlyn-pricing-package,
+body.rtl .careerlyn-pricing-package {
+    text-align: right;
+}
+
+[dir="rtl"] .careerlyn-pricing-package-badge,
+body.rtl .careerlyn-pricing-package-badge {
+    right: auto;
+    left: 25px;
+}
+
+[dir="rtl"] .careerlyn-pricing-package-button:hover svg,
+body.rtl .careerlyn-pricing-package-button:hover svg {
+    transform: translate(-3px, -3px);
+}
+
+@media (max-width: 1024px) {
+
+    .careerlyn-pricing-packages {
+        padding: 80px 0;
+    }
+
+    .careerlyn-pricing-packages-grid {
+        gap: 14px;
+    }
+
+    .careerlyn-pricing-package {
+        padding: 28px 22px 24px;
+    }
+
+    .careerlyn-pricing-package-heading h3 {
+        font-size: 20px;
+    }
+
+    .careerlyn-pricing-package-price strong {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .careerlyn-pricing-packages {
+        padding: 70px 0;
+    }
+
+    .careerlyn-pricing-packages-container {
+        width: min(100% - 36px, var(--container-width));
+    }
+
+    .careerlyn-pricing-packages-header {
+        margin-bottom: 40px;
+    }
+
+    .careerlyn-pricing-packages-grid {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+        margin: 0 auto;
+        gap: 18px;
+    }
+
+    .careerlyn-pricing-package {
+        padding: 30px 26px 26px;
+    }
+
+    .careerlyn-pricing-package-featured {
+        order: -1;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .careerlyn-pricing-packages {
+        padding: 60px 0;
+    }
+
+    .careerlyn-pricing-packages-container {
+        width: calc(100% - 28px);
+    }
+
+    .careerlyn-pricing-packages-header {
+        margin-bottom: 32px;
+    }
+
+    .careerlyn-pricing-packages-header h2 {
+        font-size: 30px;
+    }
+
+    .careerlyn-pricing-packages-header p {
+        font-size: 11px;
+    }
+
+    .careerlyn-pricing-package {
+        padding: 25px 20px 22px;
+    }
+
+    .careerlyn-pricing-package-number {
+        font-size: 27px;
+    }
+
+    .careerlyn-pricing-package-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .careerlyn-pricing-package-heading h3 {
+        font-size: 19px;
+    }
+
+    .careerlyn-pricing-package-heading p {
+        font-size: 10px;
+    }
+
+    .careerlyn-pricing-package-price strong {
+        font-size: 28px;
+    }
+
+    .careerlyn-pricing-package-meta span {
+        font-size: 8px;
+    }
+
+    .careerlyn-pricing-package-list li {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .careerlyn-pricing-packages {
+        padding: 50px 0;
+    }
+
+    .careerlyn-pricing-packages-container {
+        width: calc(100% - 22px);
+    }
+
+    .careerlyn-pricing-packages-header h2 {
+        font-size: 26px;
+    }
+
+    .careerlyn-pricing-package {
+        padding: 22px 17px 20px;
+    }
+
+    .careerlyn-pricing-package-heading h3 {
+        font-size: 18px;
+    }
+
+    .careerlyn-pricing-package-heading p {
+        font-size: 9px;
+    }
+
+    .careerlyn-pricing-package-list li {
+        font-size: 9px;
+    }
+
+    .careerlyn-pricing-package-button {
+        font-size: 9px;
+    }
+}
+
+.careerlyn-pricing-included {
+    width: 100%;
+    padding: 90px 0;
+    background: var(--bg-color);
+}
+
+.careerlyn-pricing-included-container {
+    width: min(var(--container-width), calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.careerlyn-pricing-included-header {
+    max-width: 760px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.careerlyn-pricing-included-header .home-section-tag {
+    margin-bottom: 16px;
+}
+
+.careerlyn-pricing-included-header h2 {
+    margin-bottom: 18px;
+}
+
+.careerlyn-pricing-included-header h2 span {
+    display: block;
+    color: var(--primary);
+}
+
+.careerlyn-pricing-included-header p {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.careerlyn-pricing-included-layout {
+    display: grid;
+    grid-template-columns: 0.82fr 1.18fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.careerlyn-pricing-included-intro {
+    position: relative;
+    min-height: 470px;
+    padding: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    background: var(--primary);
+}
+
+.careerlyn-pricing-included-intro::before {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    top: -90px;
+    right: -80px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+}
+
+.careerlyn-pricing-included-intro::after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    top: -50px;
+    right: -40px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+}
+
+.careerlyn-pricing-included-number {
+    position: absolute;
+    top: 28px;
+    left: 32px;
+    color: rgba(255, 255, 255, 0.22);
+    font-family: var(--font-heading);
+    font-size: 52px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.careerlyn-pricing-included-icon {
+    position: relative;
+    z-index: 2;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.careerlyn-pricing-included-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.careerlyn-pricing-included-intro h3 {
+    position: relative;
+    z-index: 2;
+    max-width: 360px;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+    font-size: 29px;
+    line-height: 1.15;
+}
+
+.careerlyn-pricing-included-intro h3 span {
+    display: block;
+    color: var(--secondary);
+}
+
+.careerlyn-pricing-included-intro > p {
+    position: relative;
+    z-index: 2;
+    max-width: 420px;
+    margin-bottom: 26px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+.careerlyn-pricing-included-link {
+    position: relative;
+    z-index: 2;
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #FFFFFF;
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.careerlyn-pricing-included-link svg {
+    width: 15px;
+    height: 15px;
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-included-link:hover {
+    color: var(--secondary);
+}
+
+.careerlyn-pricing-included-link:hover svg {
+    transform: translate(3px, -3px);
+}
+
+.careerlyn-pricing-included-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+}
+
+.careerlyn-pricing-included-item {
+    min-height: 235px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    background: var(--card-bg);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-included-item:hover {
+    background: var(--primary-light);
+}
+
+.careerlyn-pricing-included-item-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: var(--primary-light);
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-included-item:hover .careerlyn-pricing-included-item-icon {
+    color: #FFFFFF;
+    background: var(--primary);
+}
+
+.careerlyn-pricing-included-item-icon svg {
+    width: 19px;
+    height: 19px;
+}
+
+.careerlyn-pricing-included-item span {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--primary);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.careerlyn-pricing-included-item h3 {
+    margin-bottom: 9px;
+    font-size: 18px;
+}
+
+.careerlyn-pricing-included-item p {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+[dir="rtl"] .careerlyn-pricing-included,
+body.rtl .careerlyn-pricing-included {
+    direction: rtl;
+}
+
+[dir="rtl"] .careerlyn-pricing-included-intro,
+body.rtl .careerlyn-pricing-included-intro {
+    text-align: right;
+}
+
+[dir="rtl"] .careerlyn-pricing-included-number,
+body.rtl .careerlyn-pricing-included-number {
+    left: auto;
+    right: 32px;
+}
+
+[dir="rtl"] .careerlyn-pricing-included-intro::before,
+body.rtl .careerlyn-pricing-included-intro::before {
+    right: auto;
+    left: -80px;
+}
+
+[dir="rtl"] .careerlyn-pricing-included-intro::after,
+body.rtl .careerlyn-pricing-included-intro::after {
+    right: auto;
+    left: -40px;
+}
+
+[dir="rtl"] .careerlyn-pricing-included-link:hover svg,
+body.rtl .careerlyn-pricing-included-link:hover svg {
+    transform: translate(-3px, -3px);
+}
+
+[dir="rtl"] .careerlyn-pricing-included-list,
+body.rtl .careerlyn-pricing-included-list {
+    border-left: none;
+    border-right: 1px solid var(--border-color);
+}
+
+@media (max-width: 1024px) {
+
+    .careerlyn-pricing-included {
+        padding: 80px 0;
+    }
+
+    .careerlyn-pricing-included-layout {
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 16px;
+    }
+
+    .careerlyn-pricing-included-intro {
+        min-height: 440px;
+        padding: 30px;
+    }
+
+    .careerlyn-pricing-included-item {
+        min-height: 220px;
+        padding: 25px;
+    }
+
+    .careerlyn-pricing-included-item h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .careerlyn-pricing-included {
+        padding: 70px 0;
+    }
+
+    .careerlyn-pricing-included-container {
+        width: min(100% - 36px, var(--container-width));
+    }
+
+    .careerlyn-pricing-included-header {
+        margin-bottom: 40px;
+    }
+
+    .careerlyn-pricing-included-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .careerlyn-pricing-included-intro {
+        min-height: 380px;
+    }
+
+    .careerlyn-pricing-included-list {
+        border-left: 1px solid var(--border-color);
+    }
+
+    [dir="rtl"] .careerlyn-pricing-included-list,
+    body.rtl .careerlyn-pricing-included-list {
+        border-right: 1px solid var(--border-color);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .careerlyn-pricing-included {
+        padding: 60px 0;
+    }
+
+    .careerlyn-pricing-included-container {
+        width: calc(100% - 28px);
+    }
+
+    .careerlyn-pricing-included-header {
+        margin-bottom: 32px;
+    }
+
+    .careerlyn-pricing-included-header h2 {
+        font-size: 30px;
+    }
+
+    .careerlyn-pricing-included-header p {
+        font-size: 11px;
+    }
+
+    .careerlyn-pricing-included-intro {
+        min-height: 350px;
+        padding: 25px;
+    }
+
+    .careerlyn-pricing-included-intro h3 {
+        font-size: 25px;
+    }
+
+    .careerlyn-pricing-included-intro > p {
+        font-size: 10px;
+    }
+
+    .careerlyn-pricing-included-list {
+        grid-template-columns: 1fr;
+    }
+
+    .careerlyn-pricing-included-item {
+        min-height: auto;
+        padding: 23px;
+        gap: 20px;
+    }
+
+    .careerlyn-pricing-included-item h3 {
+        font-size: 17px;
+    }
+
+    .careerlyn-pricing-included-item p {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .careerlyn-pricing-included {
+        padding: 50px 0;
+    }
+
+    .careerlyn-pricing-included-container {
+        width: calc(100% - 22px);
+    }
+
+    .careerlyn-pricing-included-header h2 {
+        font-size: 26px;
+    }
+
+    .careerlyn-pricing-included-intro {
+        min-height: 320px;
+        padding: 20px;
+    }
+
+    .careerlyn-pricing-included-intro h3 {
+        font-size: 22px;
+    }
+
+    .careerlyn-pricing-included-item {
+        padding: 20px;
+    }
+
+    .careerlyn-pricing-included-item h3 {
+        font-size: 16px;
+    }
+}
+
+.careerlyn-pricing-comparison {
+    width: 100%;
+    padding: 90px 0;
+    background: var(--card-bg);
+}
+
+.careerlyn-pricing-comparison-container {
+    width: min(var(--container-width), calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.careerlyn-pricing-comparison-header {
+    max-width: 760px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.careerlyn-pricing-comparison-header .home-section-tag {
+    margin-bottom: 16px;
+}
+
+.careerlyn-pricing-comparison-header h2 {
+    margin-bottom: 18px;
+}
+
+.careerlyn-pricing-comparison-header h2 span {
+    display: block;
+    color: var(--primary);
+}
+
+.careerlyn-pricing-comparison-header p {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.careerlyn-pricing-comparison-table {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    background: var(--bg-color);
+}
+
+.careerlyn-pricing-comparison-row {
+    display: grid;
+    grid-template-columns: 1.35fr repeat(3, 1fr);
+    min-height: 68px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.careerlyn-pricing-comparison-row:last-child {
+    border-bottom: 0;
+}
+
+.careerlyn-pricing-comparison-row > div {
+    min-width: 0;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-left: 1px solid var(--border-color);
+}
+
+.careerlyn-pricing-comparison-row > div:first-child {
+    border-left: 0;
+}
+
+.careerlyn-pricing-comparison-feature {
+    justify-content: flex-start !important;
+    text-align: left !important;
+}
+
+.careerlyn-pricing-comparison-feature span {
+    color: var(--heading-color);
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.careerlyn-pricing-comparison-head {
+    min-height: 105px;
+    background: var(--primary-light);
+}
+
+.careerlyn-pricing-comparison-head > div {
+    flex-direction: column;
+    gap: 7px;
+}
+
+.careerlyn-pricing-comparison-head > div:not(:first-child) > span {
+    color: var(--primary);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.careerlyn-pricing-comparison-head strong {
+    color: var(--heading-color);
+    font-family: var(--font-heading);
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.careerlyn-pricing-comparison-head .careerlyn-pricing-comparison-feature span {
+    color: var(--primary);
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    font-weight: 800;
+}
+
+.careerlyn-pricing-comparison-popular {
+    position: relative;
+    background: var(--primary-light);
+}
+
+.careerlyn-pricing-comparison-head .careerlyn-pricing-comparison-popular {
+    background: var(--primary);
+}
+
+.careerlyn-pricing-comparison-head .careerlyn-pricing-comparison-popular span,
+.careerlyn-pricing-comparison-head .careerlyn-pricing-comparison-popular strong {
+    color: #FFFFFF;
+}
+
+.careerlyn-pricing-comparison-popular small {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    padding: 5px 12px;
+    color: #FFFFFF;
+    background: var(--secondary);
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.careerlyn-pricing-comparison-row > div > svg {
+    width: 17px;
+    height: 17px;
+}
+
+.careerlyn-pricing-comparison-row > div > svg[data-lucide="check"] {
+    color: var(--secondary);
+    stroke-width: 2.5;
+}
+
+.careerlyn-pricing-comparison-row > div > svg[data-lucide="minus"] {
+    color: var(--text-light);
+    opacity: 0.55;
+}
+
+.careerlyn-pricing-comparison-footer {
+    min-height: 76px;
+    background: var(--primary-light);
+}
+
+.careerlyn-pricing-comparison-footer > div:not(:first-child) strong {
+    color: var(--heading-color);
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 800;
+}
+
+[dir="rtl"] .careerlyn-pricing-comparison,
+body.rtl .careerlyn-pricing-comparison {
+    direction: rtl;
+}
+
+[dir="rtl"] .careerlyn-pricing-comparison-row > div,
+body.rtl .careerlyn-pricing-comparison-row > div {
+    border-left: 0;
+    border-right: 1px solid var(--border-color);
+}
+
+[dir="rtl"] .careerlyn-pricing-comparison-row > div:first-child,
+body.rtl .careerlyn-pricing-comparison-row > div:first-child {
+    border-right: 0;
+}
+
+[dir="rtl"] .careerlyn-pricing-comparison-feature,
+body.rtl .careerlyn-pricing-comparison-feature {
+    justify-content: flex-start !important;
+    text-align: right !important;
+}
+
+[dir="rtl"] .careerlyn-pricing-comparison-popular small,
+body.rtl .careerlyn-pricing-comparison-popular small {
+    right: auto;
+    left: 12px;
+}
+
+@media (max-width: 1024px) {
+
+    .careerlyn-pricing-comparison {
+        padding: 80px 0;
+    }
+
+    .careerlyn-pricing-comparison-row {
+        grid-template-columns: 1.25fr repeat(3, 1fr);
+    }
+
+    .careerlyn-pricing-comparison-row > div {
+        padding: 16px 12px;
+    }
+
+    .careerlyn-pricing-comparison-feature span {
+        font-size: 10px;
+    }
+
+    .careerlyn-pricing-comparison-head strong {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .careerlyn-pricing-comparison {
+        padding: 70px 0;
+    }
+
+    .careerlyn-pricing-comparison-container {
+        width: min(100% - 36px, var(--container-width));
+    }
+
+    .careerlyn-pricing-comparison-table {
+        overflow-x: auto;
+    }
+
+    .careerlyn-pricing-comparison-row {
+        min-width: 680px;
+    }
+
+    .careerlyn-pricing-comparison-header {
+        margin-bottom: 38px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .careerlyn-pricing-comparison {
+        padding: 60px 0;
+    }
+
+    .careerlyn-pricing-comparison-container {
+        width: calc(100% - 28px);
+    }
+
+    .careerlyn-pricing-comparison-header {
+        margin-bottom: 30px;
+    }
+
+    .careerlyn-pricing-comparison-header h2 {
+        font-size: 30px;
+    }
+
+    .careerlyn-pricing-comparison-header p {
+        font-size: 11px;
+    }
+
+    .careerlyn-pricing-comparison-table {
+        overflow-x: auto;
+    }
+
+    .careerlyn-pricing-comparison-row {
+        min-width: 650px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .careerlyn-pricing-comparison {
+        padding: 50px 0;
+    }
+
+    .careerlyn-pricing-comparison-container {
+        width: calc(100% - 22px);
+    }
+
+    .careerlyn-pricing-comparison-header h2 {
+        font-size: 26px;
+    }
+
+    .careerlyn-pricing-comparison-header p {
+        font-size: 9px;
+    }
+
+    .careerlyn-pricing-comparison-row {
+        min-width: 620px;
+    }
+}
+
+.careerlyn-pricing-guidance {
+    padding: 90px 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.careerlyn-pricing-guidance-container {
+    width: min(var(--container-width), calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.careerlyn-pricing-guidance-header {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    gap: 70px;
+    align-items: end;
+    margin-bottom: 55px;
+}
+
+.careerlyn-pricing-guidance-header .home-section-tag {
+    margin-bottom: 16px;
+}
+
+.careerlyn-pricing-guidance-header h2 {
+    max-width: 700px;
+}
+
+.careerlyn-pricing-guidance-header h2 span {
+    display: block;
+    color: var(--primary);
+}
+
+.careerlyn-pricing-guidance-header p {
+    max-width: 500px;
+    padding-bottom: 4px;
+}
+
+.careerlyn-pricing-guidance-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.careerlyn-pricing-guidance-visual {
+    position: relative;
+    min-height: 600px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: var(--card-bg);
+}
+
+.careerlyn-pricing-guidance-visual img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.careerlyn-pricing-guidance-visual:hover img {
+    transform: scale(1.04);
+}
+
+.careerlyn-pricing-guidance-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(5, 8, 17, 0.92) 0%,
+        rgba(5, 8, 17, 0.48) 48%,
+        rgba(5, 8, 17, 0.08) 100%
+    );
+}
+
+.careerlyn-pricing-guidance-visual-content {
+    position: absolute;
+    z-index: 2;
+    left: 38px;
+    right: 38px;
+    bottom: 38px;
+}
+
+.careerlyn-pricing-guidance-visual-content > span {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--secondary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.careerlyn-pricing-guidance-visual-content h3 {
+    max-width: 460px;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+    font-size: clamp(28px, 3vw, 42px);
+    line-height: 1.12;
+    letter-spacing: -1px;
+}
+
+.careerlyn-pricing-guidance-visual-content h3 strong {
+    display: block;
+    color: var(--secondary);
+    font-weight: 800;
+}
+
+.careerlyn-pricing-guidance-visual-content p {
+    max-width: 500px;
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.careerlyn-pricing-guidance-visual-number {
+    position: absolute;
+    z-index: 3;
+    top: 28px;
+    right: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 13px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 6px;
+    background: rgba(5, 8, 17, 0.38);
+    backdrop-filter: blur(8px);
+}
+
+.careerlyn-pricing-guidance-visual-number strong {
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.careerlyn-pricing-guidance-visual-number span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.careerlyn-pricing-guidance-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.careerlyn-pricing-guidance-option {
+    display: grid;
+    grid-template-columns: 64px 1fr auto;
+    align-items: center;
+    gap: 22px;
+    min-height: 190px;
+    padding: 25px 28px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--card-bg);
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-guidance-option:hover {
+    border-color: var(--primary);
+    transform: translateX(5px);
+    box-shadow: 0 14px 35px rgba(21, 84, 199, 0.08);
+}
+
+.careerlyn-pricing-guidance-option-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    justify-content: space-between;
+}
+
+.careerlyn-pricing-guidance-option-top > span {
+    color: var(--border-active);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.careerlyn-pricing-guidance-option-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.careerlyn-pricing-guidance-option-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+.careerlyn-pricing-guidance-option-content > span {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--secondary);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.careerlyn-pricing-guidance-option-content h3 {
+    margin-bottom: 8px;
+}
+
+.careerlyn-pricing-guidance-option-content p {
+    max-width: 450px;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.careerlyn-pricing-guidance-option > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    align-self: end;
+    white-space: nowrap;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-guidance-option > a svg {
+    width: 14px;
+    height: 14px;
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-guidance-option > a:hover svg {
+    transform: translate(3px, -3px);
+}
+
+@media (max-width: 1024px) {
+    .careerlyn-pricing-guidance {
+        padding: 80px 0;
+    }
+
+    .careerlyn-pricing-guidance-header {
+        grid-template-columns: 1fr 0.8fr;
+        gap: 40px;
+    }
+
+    .careerlyn-pricing-guidance-layout {
+        grid-template-columns: 0.85fr 1.15fr;
+    }
+
+    .careerlyn-pricing-guidance-visual {
+        min-height: 570px;
+    }
+
+    .careerlyn-pricing-guidance-option {
+        grid-template-columns: 54px 1fr;
+        gap: 18px;
+        padding: 22px;
+    }
+
+    .careerlyn-pricing-guidance-option > a {
+        grid-column: 2;
+        align-self: auto;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .careerlyn-pricing-guidance {
+        padding: 70px 0;
+    }
+
+    .careerlyn-pricing-guidance-container {
+        width: min(var(--container-width), calc(100% - 36px));
+    }
+
+    .careerlyn-pricing-guidance-header {
+        display: block;
+        margin-bottom: 42px;
+    }
+
+    .careerlyn-pricing-guidance-header h2 {
+        margin-bottom: 18px;
+    }
+
+    .careerlyn-pricing-guidance-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .careerlyn-pricing-guidance-visual {
+        min-height: 500px;
+    }
+
+    .careerlyn-pricing-guidance-options {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .careerlyn-pricing-guidance {
+        padding: 60px 0;
+    }
+
+    .careerlyn-pricing-guidance-container {
+        width: min(var(--container-width), calc(100% - 28px));
+    }
+
+    .careerlyn-pricing-guidance-header {
+        margin-bottom: 32px;
+    }
+
+    .careerlyn-pricing-guidance-visual {
+        min-height: 460px;
+        border-radius: 14px;
+    }
+
+    .careerlyn-pricing-guidance-visual-content {
+        left: 24px;
+        right: 24px;
+        bottom: 24px;
+    }
+
+    .careerlyn-pricing-guidance-visual-content h3 {
+        font-size: 27px;
+    }
+
+    .careerlyn-pricing-guidance-visual-number {
+        top: 20px;
+        right: 20px;
+    }
+
+    .careerlyn-pricing-guidance-option {
+        grid-template-columns: 46px 1fr;
+        gap: 15px;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .careerlyn-pricing-guidance-option-top {
+        min-height: 100%;
+    }
+
+    .careerlyn-pricing-guidance-option-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .careerlyn-pricing-guidance-option-content h3 {
+        font-size: 18px;
+    }
+
+    .careerlyn-pricing-guidance-option-content p {
+        font-size: 12px;
+    }
+
+    .careerlyn-pricing-guidance-option > a {
+        grid-column: 2;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .careerlyn-pricing-guidance {
+        padding: 50px 0;
+    }
+
+    .careerlyn-pricing-guidance-container {
+        width: calc(100% - 24px);
+    }
+
+    .careerlyn-pricing-guidance-visual {
+        min-height: 430px;
+    }
+
+    .careerlyn-pricing-guidance-visual-content {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .careerlyn-pricing-guidance-visual-content h3 {
+        font-size: 24px;
+    }
+
+    .careerlyn-pricing-guidance-option {
+        grid-template-columns: 40px 1fr;
+        padding: 17px;
+        gap: 12px;
+    }
+
+    .careerlyn-pricing-guidance-option-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .careerlyn-pricing-guidance-option-content h3 {
+        font-size: 16px;
+    }
+
+    .careerlyn-pricing-guidance-option-content p {
+        font-size: 12px;
+    }
+}
+
+[dir="rtl"] .careerlyn-pricing-guidance-visual-number,
+body.rtl .careerlyn-pricing-guidance-visual-number {
+    right: auto;
+    left: 28px;
+}
+
+[dir="rtl"] .careerlyn-pricing-guidance-option:hover,
+body.rtl .careerlyn-pricing-guidance-option:hover {
+    transform: translateX(-5px);
+}
+
+[dir="rtl"] .careerlyn-pricing-guidance-option > a:hover svg,
+body.rtl .careerlyn-pricing-guidance-option > a:hover svg {
+    transform: translate(-3px, -3px);
+}
+
+@media (max-width: 480px) {
+    [dir="rtl"] .careerlyn-pricing-guidance-visual-number,
+    body.rtl .careerlyn-pricing-guidance-visual-number {
+        left: 20px;
+    }
+}
+
+.careerlyn-pricing-process {
+    padding: 90px 0;
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+.careerlyn-pricing-process-container {
+    width: min(var(--container-width), calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.careerlyn-pricing-process-header {
+    max-width: 760px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.careerlyn-pricing-process-header .home-section-tag {
+    margin-bottom: 16px;
+}
+
+.careerlyn-pricing-process-header h2 {
+    margin-bottom: 18px;
+}
+
+.careerlyn-pricing-process-header h2 span {
+    display: block;
+    color: var(--primary);
+}
+
+.careerlyn-pricing-process-header p {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.careerlyn-pricing-process-content {
+    display: grid;
+    grid-template-columns: 0.72fr 1.28fr;
+    gap: 70px;
+    align-items: stretch;
+}
+
+.careerlyn-pricing-process-intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 590px;
+    padding: 40px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: var(--primary);
+}
+
+.careerlyn-pricing-process-intro::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -145px;
+    right: -145px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.careerlyn-pricing-process-intro::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    top: -90px;
+    right: -90px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.careerlyn-pricing-process-intro-number {
+    position: absolute;
+    top: 38px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.careerlyn-pricing-process-intro-number span {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.careerlyn-pricing-process-intro-number strong {
+    color: #FFFFFF;
+    font-size: 46px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.careerlyn-pricing-process-intro h3 {
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+    font-size: clamp(28px, 3vw, 42px);
+    line-height: 1.12;
+    letter-spacing: -1px;
+}
+
+.careerlyn-pricing-process-intro h3 span {
+    display: block;
+    color: var(--secondary);
+}
+
+.careerlyn-pricing-process-intro p {
+    position: relative;
+    z-index: 2;
+    max-width: 410px;
+    margin-bottom: 28px;
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.careerlyn-pricing-process-link {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 9px;
+    min-height: 46px;
+    padding: 0 17px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-process-link svg {
+    width: 15px;
+    height: 15px;
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-process-link:hover {
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+    color: var(--primary);
+}
+
+.careerlyn-pricing-process-link:hover svg {
+    transform: translate(3px, -3px);
+}
+
+.careerlyn-pricing-process-steps {
+    display: flex;
+    flex-direction: column;
+}
+
+.careerlyn-pricing-process-step {
+    position: relative;
+    display: grid;
+    grid-template-columns: 60px 1fr 52px;
+    gap: 25px;
+    align-items: center;
+    min-height: 145px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.careerlyn-pricing-process-step:first-child {
+    border-top: 1px solid var(--border-color);
+}
+
+.careerlyn-pricing-process-step-number {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.careerlyn-pricing-process-step-content > span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--secondary);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.careerlyn-pricing-process-step-content h3 {
+    margin-bottom: 7px;
+}
+
+.careerlyn-pricing-process-step-content p {
+    max-width: 600px;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.careerlyn-pricing-process-step-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    color: var(--primary);
+    background: var(--primary-light);
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-process-step-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.careerlyn-pricing-process-step:hover .careerlyn-pricing-process-step-icon {
+    color: #FFFFFF;
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: rotate(8deg);
+}
+
+@media (max-width: 1024px) {
+    .careerlyn-pricing-process {
+        padding: 80px 0;
+    }
+
+    .careerlyn-pricing-process-content {
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 45px;
+    }
+
+    .careerlyn-pricing-process-intro {
+        min-height: 560px;
+        padding: 32px;
+    }
+
+    .careerlyn-pricing-process-intro-number {
+        top: 32px;
+        left: 32px;
+    }
+
+    .careerlyn-pricing-process-step {
+        grid-template-columns: 45px 1fr 46px;
+        gap: 18px;
+        min-height: 140px;
+    }
+
+    .careerlyn-pricing-process-step-icon {
+        width: 46px;
+        height: 46px;
+    }
+}
+
+@media (max-width: 768px) {
+    .careerlyn-pricing-process {
+        padding: 70px 0;
+    }
+
+    .careerlyn-pricing-process-container {
+        width: min(var(--container-width), calc(100% - 36px));
+    }
+
+    .careerlyn-pricing-process-header {
+        margin-bottom: 45px;
+    }
+
+    .careerlyn-pricing-process-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .careerlyn-pricing-process-intro {
+        min-height: 420px;
+    }
+
+    .careerlyn-pricing-process-step {
+        min-height: 125px;
+    }
+}
+
+@media (max-width: 480px) {
+    .careerlyn-pricing-process {
+        padding: 60px 0;
+    }
+
+    .careerlyn-pricing-process-container {
+        width: min(var(--container-width), calc(100% - 28px));
+    }
+
+    .careerlyn-pricing-process-header {
+        margin-bottom: 35px;
+    }
+
+    .careerlyn-pricing-process-intro {
+        min-height: 390px;
+        padding: 25px;
+        border-radius: 14px;
+    }
+
+    .careerlyn-pricing-process-intro-number {
+        top: 25px;
+        left: 25px;
+    }
+
+    .careerlyn-pricing-process-intro-number strong {
+        font-size: 38px;
+    }
+
+    .careerlyn-pricing-process-intro h3 {
+        font-size: 28px;
+    }
+
+    .careerlyn-pricing-process-step {
+        grid-template-columns: 35px 1fr;
+        gap: 15px;
+        min-height: auto;
+        padding: 22px 0;
+    }
+
+    .careerlyn-pricing-process-step-icon {
+        grid-column: 1;
+        grid-row: 1;
+        width: 35px;
+        height: 35px;
+    }
+
+    .careerlyn-pricing-process-step-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .careerlyn-pricing-process-step-number {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+        align-self: start;
+        font-size: 10px;
+    }
+
+    .careerlyn-pricing-process-step-content {
+        grid-column: 2;
+        grid-row: 2;
+        margin-top: -5px;
+    }
+
+    .careerlyn-pricing-process-step-content h3 {
+        font-size: 18px;
+    }
+
+    .careerlyn-pricing-process-step-content p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .careerlyn-pricing-process {
+        padding: 50px 0;
+    }
+
+    .careerlyn-pricing-process-container {
+        width: calc(100% - 24px);
+    }
+
+    .careerlyn-pricing-process-intro {
+        min-height: 360px;
+        padding: 21px;
+    }
+
+    .careerlyn-pricing-process-intro-number {
+        top: 21px;
+        left: 21px;
+    }
+
+    .careerlyn-pricing-process-intro h3 {
+        font-size: 25px;
+    }
+
+    .careerlyn-pricing-process-step {
+        grid-template-columns: 32px 1fr;
+        gap: 12px;
+    }
+
+    .careerlyn-pricing-process-step-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .careerlyn-pricing-process-step-content h3 {
+        font-size: 16px;
+    }
+}
+
+[dir="rtl"] .careerlyn-pricing-process-intro-number,
+body.rtl .careerlyn-pricing-process-intro-number {
+    left: auto;
+    right: 40px;
+}
+
+[dir="rtl"] .careerlyn-pricing-process-link:hover svg,
+body.rtl .careerlyn-pricing-process-link:hover svg {
+    transform: translate(-3px, -3px);
+}
+
+@media (max-width: 1024px) {
+    [dir="rtl"] .careerlyn-pricing-process-intro-number,
+    body.rtl .careerlyn-pricing-process-intro-number {
+        right: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    [dir="rtl"] .careerlyn-pricing-process-intro-number,
+    body.rtl .careerlyn-pricing-process-intro-number {
+        right: 25px;
+    }
+
+    [dir="rtl"] .careerlyn-pricing-process-step-number,
+    body.rtl .careerlyn-pricing-process-step-number {
+        justify-self: start;
+    }
+}
+
+@media (max-width: 360px) {
+    [dir="rtl"] .careerlyn-pricing-process-intro-number,
+    body.rtl .careerlyn-pricing-process-intro-number {
+        right: 21px;
+    }
+}
+
+
+.careerlyn-pricing-faq {
+    padding: 90px 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.careerlyn-pricing-faq-container {
+    width: min(980px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.careerlyn-pricing-faq-header {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.careerlyn-pricing-faq-header .home-section-tag {
+    margin-bottom: 16px;
+}
+
+.careerlyn-pricing-faq-header h2 {
+    margin-bottom: 18px;
+}
+
+.careerlyn-pricing-faq-header h2 span {
+    display: block;
+    color: var(--primary);
+}
+
+.careerlyn-pricing-faq-header p {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.careerlyn-pricing-faq-list {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--border-color);
+}
+
+.careerlyn-pricing-faq-item {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.careerlyn-pricing-faq-question {
+    width: 100%;
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 20px 4px;
+    border: 0;
+    background: transparent;
+    color: var(--heading-color);
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 750;
+    line-height: 1.45;
+    text-align: left;
+    cursor: pointer;
+}
+
+.careerlyn-pricing-faq-question > span:first-child {
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-faq-item.active .careerlyn-pricing-faq-question > span:first-child {
+    color: var(--primary);
+}
+
+.careerlyn-pricing-faq-icon {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    color: var(--primary);
+    background: var(--card-bg);
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-faq-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.careerlyn-pricing-faq-icon svg[data-lucide="minus"] {
+    display: none;
+}
+
+.careerlyn-pricing-faq-item.active .careerlyn-pricing-faq-icon {
+    color: #FFFFFF;
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.careerlyn-pricing-faq-item.active .careerlyn-pricing-faq-icon svg[data-lucide="plus"] {
+    display: none;
+}
+
+.careerlyn-pricing-faq-item.active .careerlyn-pricing-faq-icon svg[data-lucide="minus"] {
+    display: block;
+}
+
+.careerlyn-pricing-faq-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+}
+
+.careerlyn-pricing-faq-answer p {
+    min-height: 0;
+    max-width: 800px;
+    overflow: hidden;
+    padding: 0 65px 0 4px;
+    opacity: 0;
+    transition:
+        opacity 0.25s ease,
+        padding 0.3s ease;
+}
+
+.careerlyn-pricing-faq-item.active .careerlyn-pricing-faq-answer {
+    grid-template-rows: 1fr;
+}
+
+.careerlyn-pricing-faq-item.active .careerlyn-pricing-faq-answer p {
+    padding-top: 0;
+    padding-bottom: 28px;
+    opacity: 1;
+}
+
+.careerlyn-pricing-faq-question:hover .careerlyn-pricing-faq-icon {
+    border-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .careerlyn-pricing-faq {
+        padding: 70px 0;
+    }
+
+    .careerlyn-pricing-faq-container {
+        width: min(980px, calc(100% - 36px));
+    }
+
+    .careerlyn-pricing-faq-header {
+        margin-bottom: 42px;
+    }
+
+    .careerlyn-pricing-faq-question {
+        min-height: 75px;
+        font-size: 15px;
+    }
+
+    .careerlyn-pricing-faq-answer p {
+        padding-right: 55px;
+    }
+}
+
+@media (max-width: 480px) {
+    .careerlyn-pricing-faq {
+        padding: 60px 0;
+    }
+
+    .careerlyn-pricing-faq-container {
+        width: min(980px, calc(100% - 28px));
+    }
+
+    .careerlyn-pricing-faq-header {
+        margin-bottom: 35px;
+    }
+
+    .careerlyn-pricing-faq-question {
+        min-height: 70px;
+        gap: 15px;
+        padding: 17px 2px;
+        font-size: 14px;
+    }
+
+    .careerlyn-pricing-faq-icon {
+        width: 31px;
+        height: 31px;
+    }
+
+    .careerlyn-pricing-faq-icon svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .careerlyn-pricing-faq-answer p {
+        padding: 0 45px 0 2px;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .careerlyn-pricing-faq-item.active .careerlyn-pricing-faq-answer p {
+        padding-bottom: 22px;
+    }
+}
+
+@media (max-width: 360px) {
+    .careerlyn-pricing-faq {
+        padding: 50px 0;
+    }
+
+    .careerlyn-pricing-faq-container {
+        width: calc(100% - 24px);
+    }
+
+    .careerlyn-pricing-faq-question {
+        font-size: 13px;
+        gap: 10px;
+    }
+
+    .careerlyn-pricing-faq-icon {
+        width: 29px;
+        height: 29px;
+    }
+
+    .careerlyn-pricing-faq-answer p {
+        padding-right: 40px;
+        font-size: 12px;
+    }
+}
+
+[dir="rtl"] .careerlyn-pricing-faq-question,
+body.rtl .careerlyn-pricing-faq-question {
+    text-align: right;
+}
+
+[dir="rtl"] .careerlyn-pricing-faq-answer p,
+body.rtl .careerlyn-pricing-faq-answer p {
+    padding-left: 65px;
+    padding-right: 4px;
+}
+
+@media (max-width: 768px) {
+    [dir="rtl"] .careerlyn-pricing-faq-answer p,
+    body.rtl .careerlyn-pricing-faq-answer p {
+        padding-left: 55px;
+        padding-right: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    [dir="rtl"] .careerlyn-pricing-faq-answer p,
+    body.rtl .careerlyn-pricing-faq-answer p {
+        padding-left: 45px;
+        padding-right: 2px;
+    }
+}
+
+@media (max-width: 360px) {
+    [dir="rtl"] .careerlyn-pricing-faq-answer p,
+    body.rtl .careerlyn-pricing-faq-answer p {
+        padding-left: 40px;
+        padding-right: 2px;
+    }
+}
+
+.careerlyn-pricing-cta {
+    padding: 40px 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.careerlyn-pricing-cta-container {
+    width: min(var(--container-width), calc(100% - 48px));
+    min-height: 450px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 60px;
+    padding: 35px 75px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: 22px;
+    background: var(--card-bg);
+}
+
+.careerlyn-pricing-cta-container::before {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    top: -210px;
+    right: -150px;
+    border-radius: 50%;
+    background: var(--secondary-light);
+}
+
+.careerlyn-pricing-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 620px;
+}
+
+.careerlyn-pricing-cta-content .home-section-tag {
+    margin-bottom: 18px;
+}
+
+.careerlyn-pricing-cta-content h2 {
+    margin-bottom: 20px;
+}
+
+.careerlyn-pricing-cta-content h2 span {
+    display: block;
+    color: var(--primary);
+}
+
+.careerlyn-pricing-cta-content p {
+    max-width: 570px;
+    margin-bottom: 30px;
+}
+
+.careerlyn-pricing-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.careerlyn-pricing-cta-primary,
+.careerlyn-pricing-cta-secondary {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 0 19px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-cta-primary {
+    color: #FFFFFF;
+    background: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.careerlyn-pricing-cta-primary:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.careerlyn-pricing-cta-primary svg,
+.careerlyn-pricing-cta-secondary svg {
+    width: 16px;
+    height: 16px;
+    transition: var(--transition-fast);
+}
+
+.careerlyn-pricing-cta-primary:hover svg {
+    transform: translate(3px, -3px);
+}
+
+.careerlyn-pricing-cta-secondary {
+    color: var(--primary);
+    background: transparent;
+    border: 1px solid var(--primary);
+}
+
+.careerlyn-pricing-cta-secondary:hover {
+    color: #FFFFFF;
+    background: var(--primary);
+}
+
+.careerlyn-pricing-cta-secondary:hover svg {
+    transform: translate(4px, 0);
+}
+
+.careerlyn-pricing-cta-visual {
+    min-height: 390px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.careerlyn-pricing-cta-circle {
+    width: 310px;
+    height: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    position: relative;
+    background:
+        radial-gradient(
+            circle,
+            var(--primary-light) 0%,
+            transparent 68%
+        );
+    animation: careerlynPricingCtaFloat 5s ease-in-out infinite;
+}
+
+.careerlyn-pricing-cta-circle::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px dashed var(--border-active);
+    border-radius: 50%;
+}
+
+.careerlyn-pricing-cta-circle::after {
+    content: "";
+    position: absolute;
+    inset: 42px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+}
+
+.careerlyn-pricing-cta-circle-inner {
+    position: relative;
+    z-index: 2;
+    width: 190px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--card-bg);
+    box-shadow: 0 20px 50px rgba(21, 84, 199, 0.12);
+    text-align: center;
+}
+
+.careerlyn-pricing-cta-circle-inner span {
+    margin-bottom: 10px;
+    color: var(--primary);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.careerlyn-pricing-cta-circle-inner strong {
+    color: var(--heading-color);
+    font-size: 25px;
+    line-height: 1.02;
+    letter-spacing: -0.8px;
+}
+
+.careerlyn-pricing-cta-circle-inner small {
+    margin-top: 12px;
+    color: var(--text-light);
+    font-size: 7px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.careerlyn-pricing-cta-float {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+    background: var(--card-bg);
+    color: var(--heading-color);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    font-size: 10px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.careerlyn-pricing-cta-float svg {
+    width: 15px;
+    height: 15px;
+    color: var(--primary);
+}
+
+.careerlyn-pricing-cta-float-one {
+    top: 30px;
+    left: 0;
+}
+
+.careerlyn-pricing-cta-float-two {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.careerlyn-pricing-cta-float-three {
+    bottom: 30px;
+    left: 20px;
+}
+
+@keyframes careerlynPricingCtaFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .careerlyn-pricing-cta {
+        padding: 80px 0;
+    }
+
+    .careerlyn-pricing-cta-container {
+        grid-template-columns: 1fr 0.9fr;
+        gap: 35px;
+        padding: 55px 45px;
+    }
+
+    .careerlyn-pricing-cta-visual {
+        min-height: 350px;
+    }
+
+    .careerlyn-pricing-cta-circle {
+        width: 270px;
+        height: 270px;
+    }
+
+    .careerlyn-pricing-cta-circle-inner {
+        width: 165px;
+        height: 165px;
+    }
+
+    .careerlyn-pricing-cta-circle-inner strong {
+        font-size: 22px;
+    }
+
+    .careerlyn-pricing-cta-float {
+        padding: 9px 11px;
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 768px) {
+    .careerlyn-pricing-cta {
+        padding: 70px 0;
+    }
+
+    .careerlyn-pricing-cta-container {
+        width: min(var(--container-width), calc(100% - 36px));
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 50px 35px;
+    }
+
+    .careerlyn-pricing-cta-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .careerlyn-pricing-cta-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .careerlyn-pricing-cta-actions {
+        justify-content: center;
+    }
+
+    .careerlyn-pricing-cta-visual {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .careerlyn-pricing-cta {
+        padding: 60px 0;
+    }
+
+    .careerlyn-pricing-cta-container {
+        width: min(var(--container-width), calc(100% - 28px));
+        padding: 40px 22px;
+        border-radius: 16px;
+    }
+
+    .careerlyn-pricing-cta-content h2 {
+        margin-bottom: 16px;
+    }
+
+    .careerlyn-pricing-cta-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .careerlyn-pricing-cta-primary,
+    .careerlyn-pricing-cta-secondary {
+        width: 100%;
+    }
+
+    .careerlyn-pricing-cta-visual {
+        min-height: 320px;
+    }
+
+    .careerlyn-pricing-cta-circle {
+        width: 235px;
+        height: 235px;
+    }
+
+    .careerlyn-pricing-cta-circle-inner {
+        width: 145px;
+        height: 145px;
+    }
+
+    .careerlyn-pricing-cta-circle-inner strong {
+        font-size: 19px;
+    }
+
+    .careerlyn-pricing-cta-float {
+        padding: 8px 10px;
+        font-size: 8px;
+    }
+
+    .careerlyn-pricing-cta-float-one {
+        top: 10px;
+        left: 0;
+    }
+
+    .careerlyn-pricing-cta-float-two {
+        right: 0;
+    }
+
+    .careerlyn-pricing-cta-float-three {
+        bottom: 10px;
+        left: 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .careerlyn-pricing-cta {
+        padding: 50px 0;
+    }
+
+    .careerlyn-pricing-cta-container {
+        width: calc(100% - 24px);
+        padding: 35px 17px;
+    }
+
+    .careerlyn-pricing-cta-visual {
+        min-height: 285px;
+    }
+
+    .careerlyn-pricing-cta-circle {
+        width: 205px;
+        height: 205px;
+    }
+
+    .careerlyn-pricing-cta-circle-inner {
+        width: 125px;
+        height: 125px;
+    }
+
+    .careerlyn-pricing-cta-circle-inner span {
+        font-size: 7px;
+    }
+
+    .careerlyn-pricing-cta-circle-inner strong {
+        font-size: 17px;
+    }
+
+    .careerlyn-pricing-cta-circle-inner small {
+        font-size: 6px;
+    }
+
+    .careerlyn-pricing-cta-float {
+        padding: 7px 8px;
+        font-size: 7px;
+    }
+
+    .careerlyn-pricing-cta-float svg {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+[dir="rtl"] .careerlyn-pricing-cta-container::before,
+body.rtl .careerlyn-pricing-cta-container::before {
+    right: auto;
+    left: -150px;
+}
+
+[dir="rtl"] .careerlyn-pricing-cta-float-one,
+body.rtl .careerlyn-pricing-cta-float-one {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .careerlyn-pricing-cta-float-two,
+body.rtl .careerlyn-pricing-cta-float-two {
+    right: auto;
+    left: 0;
+}
+
+[dir="rtl"] .careerlyn-pricing-cta-float-three,
+body.rtl .careerlyn-pricing-cta-float-three {
+    left: auto;
+    right: 20px;
+}
+
+[dir="rtl"] .careerlyn-pricing-cta-primary:hover svg,
+body.rtl .careerlyn-pricing-cta-primary:hover svg {
+    transform: translate(-3px, -3px);
+}
+
+[dir="rtl"] .careerlyn-pricing-cta-secondary:hover svg,
+body.rtl .careerlyn-pricing-cta-secondary:hover svg {
+    transform: translate(-4px, 0);
+}
+
+@media (max-width: 480px) {
+    [dir="rtl"] .careerlyn-pricing-cta-float-three,
+    body.rtl .careerlyn-pricing-cta-float-three {
+        right: 0;
+    }
+}

@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CAREERLYN | Client Dashboard</title>
+    <link rel="icon" type="image/png" sizes="184x184" href="logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<div class="dashboard-shell">
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+        <div class="dashboard-sidebar-top">
+
+            <a href="index.html" class="careerlyn-logo" aria-label="CAREERLYN Home">
+
+                <div class="logo-badge">
+                    <img
+                        src="logo.png"
+                        alt="CAREERLYN Emblem"
+                        class="brand-logo-img"
+                    >
+                </div>
+
+                <div class="logo-text-group">
+
+                    <span class="logo-brand-title">
+                        CAREER<span class="brand-lyn">LYN</span>
+                    </span>
+
+                    <span class="logo-brand-subtitle">
+                        RESUME &amp; CAREER COACHING
+                    </span>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+        <nav class="dashboard-navigation">
+
+            <span class="dashboard-nav-label">WORKSPACE</span>
+
+            <button
+                class="dashboard-nav-item active"
+                data-page="overview"
+                type="button"
+            >
+                <i data-lucide="layout-dashboard"></i>
+                <span>Overview</span>
+            </button>
+
+            <button
+                class="dashboard-nav-item"
+                data-page="resume"
+                type="button"
+            >
+                <i data-lucide="file-text"></i>
+                <span>Resume Workspace</span>
+            </button>
+
+            <button
+                class="dashboard-nav-item"
+                data-page="revisions"
+                type="button"
+            >
+                <i data-lucide="git-pull-request"></i>
+                <span>Revision Tracker</span>
+            </button>
+
+            <button
+                class="dashboard-nav-item"
+                data-page="interviews"
+                type="button"
+            >
+                <i data-lucide="video"></i>
+                <span>Mock Interviews</span>
+            </button>
+
+            <button
+                class="dashboard-nav-item"
+                data-page="feedback"
+                type="button"
+            >
+                <i data-lucide="message-square-text"></i>
+                <span>Coach Feedback</span>
+            </button>
+
+            <span class="dashboard-nav-label">ACCOUNT</span>
+
+            <button
+                class="dashboard-nav-item"
+                data-page="payments"
+                type="button"
+            >
+                <i data-lucide="receipt-text"></i>
+                <span>Payment History</span>
+            </button>
+
+            <button
+                class="dashboard-nav-item"
+                data-page="notifications"
+                type="button"
+            >
+                <i data-lucide="bell"></i>
+                <span>Notifications</span>
+                <strong class="nav-count">3</strong>
+            </button>
+
+            <button
+                class="dashboard-nav-item"
+                data-page="profile"
+                type="button"
+            >
+                <i data-lucide="user-round"></i>
+                <span>My Profile</span>
+            </button>
+
+        </nav>
+
+        <div class="dashboard-sidebar-bottom">
+
+            <button
+                class="dashboard-logout"
+                id="logoutButton"
+                type="button"
+            >
+                <i data-lucide="log-out"></i>
+                <span>Logout</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button
+                    class="dashboard-menu-toggle"
+                    id="dashboardMenuToggle"
+                    type="button"
+                    aria-label="Open dashboard navigation"
+                    aria-expanded="false"
+                >
+                    <i data-lucide="menu"></i>
+                </button>
+
+                <div class="dashboard-header-title">
+                    <span>CLIENT PORTAL</span>
+                    <strong>My Career Workspace</strong>
+                </div>
+
+            </div>
+
+            <div class="dashboard-header-actions">
+
+                <button
+                    class="dashboard-header-icon"
+                    id="dashboardDirectionToggle"
+                    type="button"
+                    aria-label="Toggle RTL and LTR"
+                    title="Toggle RTL / LTR"
+                >
+                    <i data-lucide="arrow-left-right"></i>
+                </button>
+
+                <button
+                    class="dashboard-header-icon"
+                    id="dashboardThemeToggle"
+                    type="button"
+                    aria-label="Toggle light and dark mode"
+                    title="Toggle Light / Dark Mode"
+                >
+                    <i data-lucide="moon"></i>
+                </button>
+
+                <button
+                    class="dashboard-notification-button"
+                    id="notificationButton"
+                    type="button"
+                    aria-label="Notifications"
+                >
+                    <i data-lucide="bell"></i>
+                    <span>3</span>
+                </button>
+
+                <div class="dashboard-profile">
+
+                    <button
+                        class="dashboard-profile-button"
+                        id="profileButton"
+                        type="button"
+                        aria-expanded="false"
+                    >
+                        <span class="dashboard-profile-avatar">JM</span>
+
+                        <span class="dashboard-profile-name">
+                            Jordan Miller
+                        </span>
+
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+
+                    <div class="dashboard-profile-dropdown" id="profileDropdown">
+
+                        <div class="profile-dropdown-heading">
+
+                            <span class="dashboard-profile-avatar large">
+                                JM
+                            </span>
+
+                            <div>
+                                <strong>Jordan Miller</strong>
+                                <span>jordan@example.com</span>
+                            </div>
+
+                        </div>
+
+                        <div class="profile-dropdown-divider"></div>
+
+                        <button
+                            class="profile-dropdown-item"
+                            data-profile-page="profile"
+                            type="button"
+                        >
+                            <i data-lucide="user-round"></i>
+                            <span>My Profile</span>
+                        </button>
+
+                        <button
+                            class="profile-dropdown-item"
+                            data-profile-page="notifications"
+                            type="button"
+                        >
+                            <i data-lucide="bell"></i>
+                            <span>Notifications</span>
+                        </button>
+
+                        <button
+                            class="profile-dropdown-item"
+                            data-profile-page="payments"
+                            type="button"
+                        >
+                            <i data-lucide="receipt-text"></i>
+                            <span>Payment History</span>
+                        </button>
+
+                        <div class="profile-dropdown-divider"></div>
+
+                        <button
+                            class="profile-dropdown-item profile-logout"
+                            id="profileLogout"
+                            type="button"
+                        >
+                            <i data-lucide="log-out"></i>
+                            <span>Logout</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <div class="dashboard-content" id="dashboardContent">
+
+            <section class="dashboard-page active" data-section="overview">
+
+                <div class="dashboard-welcome">
+
+                    <div>
+
+                        <span class="dashboard-page-tag">
+                            WELCOME BACK
+                        </span>
+
+                        <h1>
+                            Your Career Journey,
+                            <span>All In One Place.</span>
+                        </h1>
+
+                        <p>
+                            Track your resume progress, prepare for your next
+                            interview, review coach feedback, and manage your
+                            CAREERLYN services from one workspace.
+                        </p>
+
+                    </div>
+
+                    <div class="welcome-status">
+
+                        <span class="status-dot"></span>
+
+                        <div>
+                            <strong>Workspace Active</strong>
+                            <span>Last updated today</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-metrics">
+
+                    <article class="dashboard-metric-card">
+
+                        <div class="metric-icon">
+                            <i data-lucide="file-check-2"></i>
+                        </div>
+
+                        <div>
+                            <span>RESUME STATUS</span>
+                            <strong>In Review</strong>
+                            <small>Stage 3 of 4</small>
+                        </div>
+
+                    </article>
+
+                    <article class="dashboard-metric-card">
+
+                        <div class="metric-icon">
+                            <i data-lucide="git-branch"></i>
+                        </div>
+
+                        <div>
+                            <span>REVISIONS</span>
+                            <strong>2 / 3</strong>
+                            <small>Revision rounds used</small>
+                        </div>
+
+                    </article>
+
+                    <article class="dashboard-metric-card">
+
+                        <div class="metric-icon">
+                            <i data-lucide="calendar-check"></i>
+                        </div>
+
+                        <div>
+                            <span>NEXT SESSION</span>
+                            <strong>Oct 12</strong>
+                            <small>Mock interview</small>
+                        </div>
+
+                    </article>
+
+                    <article class="dashboard-metric-card">
+
+                        <div class="metric-icon">
+                            <i data-lucide="credit-card"></i>
+                        </div>
+
+                        <div>
+                            <span>ACCOUNT</span>
+                            <strong>Paid</strong>
+                            <small>Career Resume package</small>
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="dashboard-overview-grid">
+
+                    <article class="dashboard-panel progress-panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+                                <span>PROJECT PROGRESS</span>
+                                <h2>Career Resume Package</h2>
+                            </div>
+
+                            <strong>75%</strong>
+
+                        </div>
+
+                        <div class="progress-track">
+                            <span style="width:75%"></span>
+                        </div>
+
+                        <div class="progress-stages">
+
+                            <div class="progress-stage completed">
+                                <span>01</span>
+                                <div>
+                                    <strong>Discovery</strong>
+                                    <small>Completed</small>
+                                </div>
+                            </div>
+
+                            <div class="progress-stage completed">
+                                <span>02</span>
+                                <div>
+                                    <strong>First Draft</strong>
+                                    <small>Completed</small>
+                                </div>
+                            </div>
+
+                            <div class="progress-stage active">
+                                <span>03</span>
+                                <div>
+                                    <strong>Revision</strong>
+                                    <small>In progress</small>
+                                </div>
+                            </div>
+
+                            <div class="progress-stage">
+                                <span>04</span>
+                                <div>
+                                    <strong>Final Delivery</strong>
+                                    <small>Upcoming</small>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="dashboard-panel next-action-panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+                                <span>NEXT ACTION</span>
+                                <h2>Review Your Draft</h2>
+                            </div>
+
+                            <i data-lucide="arrow-up-right"></i>
+
+                        </div>
+
+                        <p>
+                            Your updated resume draft is ready for your review.
+                            Check the latest changes and share your feedback
+                            with your coach.
+                        </p>
+
+                        <button
+                            class="home-btn-primary dashboard-action-button"
+                            data-open-page="resume"
+                            type="button"
+                        >
+                            Review Resume
+                            <i data-lucide="arrow-up-right"></i>
+                        </button>
+
+                    </article>
+
+                </div>
+
+
+                <div class="dashboard-bottom-grid">
+
+                    <article class="dashboard-panel recent-activity">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span>RECENT ACTIVITY</span>
+                                <h2>Latest Updates</h2>
+                            </div>
+                        </div>
+
+                        <div class="activity-list">
+
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i data-lucide="file-text"></i>
+                                </div>
+                                <div>
+                                    <strong>Resume draft updated</strong>
+                                    <span>Today · 10:42 AM</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i data-lucide="message-square"></i>
+                                </div>
+                                <div>
+                                    <strong>New coach feedback received</strong>
+                                    <span>Yesterday · 4:15 PM</span>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i data-lucide="calendar"></i>
+                                </div>
+                                <div>
+                                    <strong>Mock interview scheduled</strong>
+                                    <span>Oct 12 · 3:00 PM</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="dashboard-panel coach-message">
+
+                        <div class="panel-heading">
+                            <div>
+                                <span>FROM YOUR COACH</span>
+                                <h2>Quick Feedback</h2>
+                            </div>
+
+                            <div class="coach-avatar">
+                                ER
+                            </div>
+                        </div>
+
+                        <blockquote>
+                            “Your experience is strong. The latest revision
+                            does a much better job of showing the leadership
+                            impact behind your work.”
+                        </blockquote>
+
+                        <div class="coach-message-footer">
+                            <div>
+                                <strong>Emma Richardson</strong>
+                                <span>Senior Career Coach</span>
+                            </div>
+
+                            <button
+                                class="dashboard-text-button"
+                                data-open-page="feedback"
+                                type="button"
+                            >
+                                View Feedback
+                                <i data-lucide="arrow-up-right"></i>
+                            </button>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-page" data-section="resume">
+
+                <div class="inner-page-heading">
+
+                    <div>
+                        <span class="dashboard-page-tag">
+                            RESUME WORKSPACE
+                        </span>
+
+                        <h1>
+                            Manage Your
+                            <span>Resume Drafts.</span>
+                        </h1>
+
+                        <p>
+                            Upload your current resume, access working drafts,
+                            and keep all career documents organized in one place.
+                        </p>
+                    </div>
+
+                    <button class="home-btn-primary dashboard-action-button">
+                        <i data-lucide="upload"></i>
+                        Upload Resume
+                    </button>
+
+                </div>
+
+
+                <div class="resume-workspace-grid">
+
+                    <article class="resume-upload-card">
+
+                        <div class="resume-upload-icon">
+                            <i data-lucide="cloud-upload"></i>
+                        </div>
+
+                        <h2>Upload A New Resume</h2>
+
+                        <p>
+                            Add your latest resume draft so your CAREERLYN
+                            coach can review and improve it.
+                        </p>
+
+                        <button class="home-btn-primary dashboard-action-button">
+                            Choose File
+                            <i data-lucide="upload"></i>
+                        </button>
+
+                        <small>PDF, DOC, or DOCX · Maximum 10 MB</small>
+
+                    </article>
+
+
+                    <article class="dashboard-panel resume-current">
+
+                        <div class="panel-heading">
+
+                            <div>
+                                <span>CURRENT DOCUMENT</span>
+                                <h2>Career Resume</h2>
+                            </div>
+
+                            <span class="document-status">
+                                In Review
+                            </span>
+
+                        </div>
+
+                        <div class="document-preview">
+
+                            <div class="document-icon">
+                                <i data-lucide="file-text"></i>
+                            </div>
+
+                            <div>
+                                <strong>Jordan_Miller_Career_Resume.pdf</strong>
+                                <span>Updated October 7, 2026 · 2.4 MB</span>
+                            </div>
+
+                        </div>
+
+                        <div class="document-actions">
+
+                            <button class="dashboard-outline-button">
+                                <i data-lucide="eye"></i>
+                                Preview
+                            </button>
+
+                            <button class="dashboard-outline-button">
+                                <i data-lucide="download"></i>
+                                Download
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="dashboard-panel document-history">
+
+                    <div class="panel-heading">
+                        <div>
+                            <span>DOCUMENT HISTORY</span>
+                            <h2>Previous Drafts</h2>
+                        </div>
+                    </div>
+
+                    <div class="document-history-list">
+
+                        <div class="document-row">
+                            <div class="document-row-icon">
+                                <i data-lucide="file"></i>
+                            </div>
+                            <div>
+                                <strong>Jordan_Miller_Resume_v2.pdf</strong>
+                                <span>October 2, 2026 · 2.1 MB</span>
+                            </div>
+                            <span class="document-status neutral">Archived</span>
+                            <button class="dashboard-small-button">View</button>
+                        </div>
+
+                        <div class="document-row">
+                            <div class="document-row-icon">
+                                <i data-lucide="file"></i>
+                            </div>
+                            <div>
+                                <strong>Jordan_Miller_Resume_v1.pdf</strong>
+                                <span>September 28, 2026 · 1.9 MB</span>
+                            </div>
+                            <span class="document-status neutral">Archived</span>
+                            <button class="dashboard-small-button">View</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-page" data-section="revisions">
+
+                <div class="inner-page-heading">
+
+                    <div>
+                        <span class="dashboard-page-tag">REVISION TRACKER</span>
+
+                        <h1>
+                            Follow Every
+                            <span>Stage Of Your Revision.</span>
+                        </h1>
+
+                        <p>
+                            See exactly where your resume stands and understand
+                            what has been completed, reviewed, or is coming next.
+                        </p>
+                    </div>
+
+                    <span class="revision-summary">
+                        75% Complete
+                    </span>
+
+                </div>
+
+
+                <div class="revision-timeline">
+
+                    <article class="revision-step completed">
+
+                        <div class="revision-number">
+                            <i data-lucide="check"></i>
+                        </div>
+
+                        <div class="revision-content">
+                            <span>STAGE 01 · COMPLETED</span>
+                            <h2>Career Discovery</h2>
+                            <p>
+                                Your experience, goals, strengths, and target
+                                direction were reviewed with your coach.
+                            </p>
+                        </div>
+
+                        <time>Sep 28</time>
+
+                    </article>
+
+                    <article class="revision-step completed">
+
+                        <div class="revision-number">
+                            <i data-lucide="check"></i>
+                        </div>
+
+                        <div class="revision-content">
+                            <span>STAGE 02 · COMPLETED</span>
+                            <h2>First Draft</h2>
+                            <p>
+                                Your initial resume was developed around your
+                                professional experience and career direction.
+                            </p>
+                        </div>
+
+                        <time>Oct 2</time>
+
+                    </article>
+
+                    <article class="revision-step active">
+
+                        <div class="revision-number">
+                            <i data-lucide="pen-line"></i>
+                        </div>
+
+                        <div class="revision-content">
+                            <span>STAGE 03 · IN PROGRESS</span>
+                            <h2>Revision &amp; Refinement</h2>
+                            <p>
+                                Your coach is currently refining your
+                                achievements, positioning, and final messaging.
+                            </p>
+                        </div>
+
+                        <time>Current</time>
+
+                    </article>
+
+                    <article class="revision-step">
+
+                        <div class="revision-number">
+                            <span>04</span>
+                        </div>
+
+                        <div class="revision-content">
+                            <span>STAGE 04 · UPCOMING</span>
+                            <h2>Final Delivery</h2>
+                            <p>
+                                Your polished resume will be finalized and
+                                delivered once the revision stage is complete.
+                            </p>
+                        </div>
+
+                        <time>Upcoming</time>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-page" data-section="interviews">
+
+                <div class="inner-page-heading">
+
+                    <div>
+                        <span class="dashboard-page-tag">
+                            MOCK INTERVIEWS
+                        </span>
+
+                        <h1>
+                            Practice With
+                            <span>Purpose.</span>
+                        </h1>
+
+                        <p>
+                            Book realistic mock interview sessions and prepare
+                            for the conversations that matter.
+                        </p>
+                    </div>
+
+                    <button class="home-btn-primary dashboard-action-button">
+                        <i data-lucide="calendar-plus"></i>
+                        Book Session
+                    </button>
+
+                </div>
+
+
+                <div class="interview-feature">
+
+                    <div class="interview-feature-main">
+
+                        <span>NEXT SESSION</span>
+
+                        <h2>
+                            Executive Interview
+                            Preparation
+                        </h2>
+
+                        <div class="interview-details">
+
+                            <div>
+                                <i data-lucide="calendar"></i>
+                                <span>October 12, 2026</span>
+                            </div>
+
+                            <div>
+                                <i data-lucide="clock-3"></i>
+                                <span>3:00 PM – 4:00 PM</span>
+                            </div>
+
+                            <div>
+                                <i data-lucide="user-round"></i>
+                                <span>Emma Richardson</span>
+                            </div>
+
+                        </div>
+
+                        <button class="interview-join-button">
+                            View Session Details
+                            <i data-lucide="arrow-up-right"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="interview-feature-side">
+
+                        <div class="interview-stat">
+                            <strong>02</strong>
+                            <span>Sessions Completed</span>
+                        </div>
+
+                        <div class="interview-stat">
+                            <strong>01</strong>
+                            <span>Upcoming Session</span>
+                        </div>
+
+                        <div class="interview-stat">
+                            <strong>4.8/5</strong>
+                            <span>Practice Score</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-panel interview-history">
+
+                    <div class="panel-heading">
+                        <div>
+                            <span>SESSION HISTORY</span>
+                            <h2>Previous Sessions</h2>
+                        </div>
+                    </div>
+
+                    <div class="session-row">
+                        <div class="session-date">
+                            <strong>28</strong>
+                            <span>SEP</span>
+                        </div>
+
+                        <div>
+                            <strong>General Interview Practice</strong>
+                            <span>Emma Richardson · Completed</span>
+                        </div>
+
+                        <span class="session-score">4.7 / 5</span>
+                    </div>
+
+                    <div class="session-row">
+                        <div class="session-date">
+                            <strong>04</strong>
+                            <span>OCT</span>
+                        </div>
+
+                        <div>
+                            <strong>Leadership Interview Practice</strong>
+                            <span>James Carter · Completed</span>
+                        </div>
+
+                        <span class="session-score">4.9 / 5</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-page" data-section="feedback">
+
+                <div class="inner-page-heading">
+
+                    <div>
+                        <span class="dashboard-page-tag">
+                            COACH FEEDBACK
+                        </span>
+
+                        <h1>
+                            Guidance From
+                            <span>Your Career Coach.</span>
+                        </h1>
+
+                        <p>
+                            Review notes, recommendations, and personalized
+                            feedback from your CAREERLYN coaching sessions.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="feedback-feature">
+
+                    <div class="feedback-coach">
+
+                        <div class="coach-avatar large">
+                            ER
+                        </div>
+
+                        <div>
+                            <span>SENIOR CAREER COACH</span>
+                            <h2>Emma Richardson</h2>
+                            <p>Resume Strategy &amp; Career Positioning</p>
+                        </div>
+
+                    </div>
+
+                    <div class="feedback-message">
+
+                        <span>LATEST FEEDBACK · OCTOBER 7</span>
+
+                        <blockquote>
+                            “Your revised resume now communicates your
+                            leadership experience much more clearly. The next
+                            focus should be strengthening the measurable
+                            outcomes behind your recent projects.”
+                        </blockquote>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feedback-grid">
+
+                    <article class="feedback-card">
+
+                        <div class="feedback-card-icon">
+                            <i data-lucide="target"></i>
+                        </div>
+
+                        <span>POSITIONING</span>
+
+                        <h3>Make Your Leadership Clear</h3>
+
+                        <p>
+                            Bring your ownership, decision-making, and business
+                            impact closer to the beginning of each achievement.
+                        </p>
+
+                    </article>
+
+                    <article class="feedback-card">
+
+                        <div class="feedback-card-icon">
+                            <i data-lucide="chart-no-axes-combined"></i>
+                        </div>
+
+                        <span>ACHIEVEMENTS</span>
+
+                        <h3>Strengthen Measurable Results</h3>
+
+                        <p>
+                            Add measurable outcomes wherever possible so your
+                            contributions are easier for recruiters to understand.
+                        </p>
+
+                    </article>
+
+                    <article class="feedback-card">
+
+                        <div class="feedback-card-icon">
+                            <i data-lucide="message-square"></i>
+                        </div>
+
+                        <span>NEXT DISCUSSION</span>
+
+                        <h3>Prepare For Your Mock Interview</h3>
+
+                        <p>
+                            Be ready to explain your strongest leadership example
+                            and the business result it created.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-page" data-section="payments">
+
+                <div class="inner-page-heading">
+
+                    <div>
+                        <span class="dashboard-page-tag">
+                            PAYMENT HISTORY
+                        </span>
+
+                        <h1>
+                            Your Payments &
+                            <span>Invoices.</span>
+                        </h1>
+
+                        <p>
+                            Review your CAREERLYN purchases, payment status,
+                            transaction dates, and downloadable invoices.
+                        </p>
+                    </div>
+
+                    <div class="payment-balance">
+                        <span>ACCOUNT STATUS</span>
+                        <strong>Paid</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="payment-summary">
+
+                    <article>
+                        <span>TOTAL PAID</span>
+                        <strong>₹2,499</strong>
+                        <small>Career Resume Package</small>
+                    </article>
+
+                    <article>
+                        <span>LAST PAYMENT</span>
+                        <strong>₹2,499</strong>
+                        <small>October 1, 2026</small>
+                    </article>
+
+                    <article>
+                        <span>OUTSTANDING</span>
+                        <strong>₹0</strong>
+                        <small>No pending payments</small>
+                    </article>
+
+                </div>
+
+
+                <div class="dashboard-panel payment-table-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <span>TRANSACTIONS</span>
+                            <h2>Payment History</h2>
+                        </div>
+
+                    </div>
+
+                    <div class="payment-table">
+
+                        <div class="payment-table-header">
+                            <span>DATE</span>
+                            <span>SERVICE</span>
+                            <span>AMOUNT</span>
+                            <span>STATUS</span>
+                            <span>INVOICE</span>
+                        </div>
+
+                        <div class="payment-table-row">
+                            <span>Oct 1, 2026</span>
+                            <strong>Career Resume</strong>
+                            <span>₹2,499</span>
+                            <span class="paid-status">Paid</span>
+                            <button class="dashboard-small-button">
+                                Download
+                            </button>
+                        </div>
+
+                        <div class="payment-table-row">
+                            <span>Sep 28, 2026</span>
+                            <strong>Initial Consultation</strong>
+                            <span>₹0</span>
+                            <span class="paid-status">Included</span>
+                            <button class="dashboard-small-button">
+                                View
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-page" data-section="notifications">
+
+                <div class="inner-page-heading">
+
+                    <div>
+                        <span class="dashboard-page-tag">
+                            NOTIFICATIONS
+                        </span>
+
+                        <h1>
+                            Stay Updated On
+                            <span>Your Career Workspace.</span>
+                        </h1>
+
+                        <p>
+                            Important project updates, coach messages, session
+                            reminders, and account notifications appear here.
+                        </p>
+                    </div>
+
+                    <button class="dashboard-outline-button">
+                        Mark All As Read
+                    </button>
+
+                </div>
+
+
+                <div class="notification-list">
+
+                    <article class="dashboard-notification unread">
+
+                        <div class="notification-icon blue">
+                            <i data-lucide="file-check-2"></i>
+                        </div>
+
+                        <div class="notification-content">
+                            <span>RESUME UPDATE · TODAY</span>
+                            <h3>Your resume draft is ready for review.</h3>
+                            <p>
+                                A new version has been uploaded by your coach.
+                                Review the latest changes in your Resume Workspace.
+                            </p>
+                        </div>
+
+                        <button
+                            class="dashboard-small-button"
+                            data-open-page="resume"
+                        >
+                            Open
+                        </button>
+
+                    </article>
+
+
+                    <article class="dashboard-notification unread">
+
+                        <div class="notification-icon cyan">
+                            <i data-lucide="message-square-text"></i>
+                        </div>
+
+                        <div class="notification-content">
+                            <span>COACH FEEDBACK · YESTERDAY</span>
+                            <h3>Emma left new feedback for you.</h3>
+                            <p>
+                                Your coach added recommendations about leadership
+                                achievements and measurable outcomes.
+                            </p>
+                        </div>
+
+                        <button
+                            class="dashboard-small-button"
+                            data-open-page="feedback"
+                        >
+                            Read
+                        </button>
+
+                    </article>
+
+
+                    <article class="dashboard-notification">
+
+                        <div class="notification-icon gray">
+                            <i data-lucide="calendar-check"></i>
+                        </div>
+
+                        <div class="notification-content">
+                            <span>MOCK INTERVIEW · OCT 5</span>
+                            <h3>Your mock interview is confirmed.</h3>
+                            <p>
+                                Your upcoming session with Emma Richardson is
+                                scheduled for October 12 at 3:00 PM.
+                            </p>
+                        </div>
+
+                        <button
+                            class="dashboard-small-button"
+                            data-open-page="interviews"
+                        >
+                            View
+                        </button>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-page" data-section="profile">
+
+                <div class="inner-page-heading">
+
+                    <div>
+                        <span class="dashboard-page-tag">
+                            MY PROFILE
+                        </span>
+
+                        <h1>
+                            Manage Your
+                            <span>Career Profile.</span>
+                        </h1>
+
+                        <p>
+                            Keep your contact information and career details
+                            up to date for your CAREERLYN coaching workspace.
+                        </p>
+                    </div>
+
+                    <button class="home-btn-primary dashboard-action-button">
+                        <i data-lucide="save"></i>
+                        Save Changes
+                    </button>
+
+                </div>
+
+
+                <div class="profile-layout">
+
+                    <article class="profile-summary-card">
+
+                        <div class="profile-main-avatar">
+                            JM
+                        </div>
+
+                        <h2>Jordan Miller</h2>
+
+                        <span>Career Resume Client</span>
+
+                        <div class="profile-summary-line"></div>
+
+                        <div>
+                            <small>ACTIVE PACKAGE</small>
+                            <strong>Career Resume</strong>
+                        </div>
+
+                        <div>
+                            <small>MEMBER SINCE</small>
+                            <strong>September 2026</strong>
+                        </div>
+
+                    </article>
+
+
+                    <article class="dashboard-panel profile-form-panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+                                <span>PERSONAL INFORMATION</span>
+                                <h2>Account Details</h2>
+                            </div>
+
+                        </div>
+
+                        <div class="profile-form-grid">
+
+                            <div class="profile-field">
+                                <label>Full Name</label>
+                                <input
+                                    type="text"
+                                    value="Jordan Miller"
+                                >
+                            </div>
+
+                            <div class="profile-field">
+                                <label>Email Address</label>
+                                <input
+                                    type="email"
+                                    value="jordan@example.com"
+                                >
+                            </div>
+
+                            <div class="profile-field">
+                                <label>Phone Number</label>
+                                <input
+                                    type="tel"
+                                    value="+91 98765 43210"
+                                >
+                            </div>
+
+                            <div class="profile-field">
+                                <label>Career Focus</label>
+                                <input
+                                    type="text"
+                                    value="Senior Product Leadership"
+                                >
+                            </div>
+
+                            <div class="profile-field full">
+                                <label>Career Goal</label>
+                                <textarea rows="4">Position myself for a senior leadership role in product strategy and business transformation.</textarea>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+<div class="dashboard-overlay" id="dashboardOverlay"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const body = document.body;
+    const html = document.documentElement;
+
+    const sidebar =
+        document.getElementById("dashboardSidebar");
+
+    const menuToggle =
+        document.getElementById("dashboardMenuToggle");
+
+    const overlay =
+        document.getElementById("dashboardOverlay");
+
+    const themeToggle =
+        document.getElementById("dashboardThemeToggle");
+
+    const directionToggle =
+        document.getElementById("dashboardDirectionToggle");
+
+    const profileButton =
+        document.getElementById("profileButton");
+
+    const profileDropdown =
+        document.getElementById("profileDropdown");
+
+    const logoutButton =
+        document.getElementById("logoutButton");
+
+    const profileLogout =
+        document.getElementById("profileLogout");
+
+    const notificationButton =
+        document.getElementById("notificationButton");
+
+    const navItems =
+        document.querySelectorAll(".dashboard-nav-item");
+
+    const pages =
+        document.querySelectorAll(".dashboard-page");
+
+    function refreshIcons() {
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    }
+
+    function updateThemeIcon() {
+
+        if (!themeToggle) return;
+
+        const icon =
+            body.classList.contains("dark-mode")
+                ? "sun"
+                : "moon";
+
+        themeToggle.innerHTML =
+            `<i data-lucide="${icon}"></i>`;
+
+        refreshIcons();
+    }
+
+    function updateDirectionIcon() {
+
+        if (!directionToggle) return;
+
+        directionToggle.innerHTML =
+            `<i data-lucide="arrow-left-right"></i>`;
+
+        refreshIcons();
+    }
+
+    function openSidebar() {
+
+        sidebar.classList.add("open");
+        overlay.classList.add("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            "Close dashboard navigation"
+        );
+
+        menuToggle.innerHTML =
+            `<i data-lucide="x"></i>`;
+
+        refreshIcons();
+    }
+
+    function closeSidebar() {
+
+        sidebar.classList.remove("open");
+        overlay.classList.remove("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            "Open dashboard navigation"
+        );
+
+        menuToggle.innerHTML =
+            `<i data-lucide="menu"></i>`;
+
+        refreshIcons();
+    }
+
+    function openPage(pageName) {
+
+        pages.forEach(page => {
+            page.classList.toggle(
+                "active",
+                page.dataset.section === pageName
+            );
+        });
+
+        navItems.forEach(item => {
+            item.classList.toggle(
+                "active",
+                item.dataset.page === pageName
+            );
+        });
+
+        closeProfileDropdown();
+
+        if (window.innerWidth <= 900) {
+            closeSidebar();
+        }
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+        refreshIcons();
+    }
+
+    function openProfileDropdown() {
+
+        profileDropdown.classList.add("open");
+
+        profileButton.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+    }
+
+    function closeProfileDropdown() {
+
+        profileDropdown.classList.remove("open");
+
+        profileButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+    }
+
+    function toggleProfileDropdown() {
+
+        const isOpen =
+            profileDropdown.classList.contains("open");
+
+        if (isOpen) {
+            closeProfileDropdown();
+        } else {
+            openProfileDropdown();
+        }
+    }
+
+    function logout() {
+
+        localStorage.removeItem("careerlyn-session");
+        window.location.href = "login.html";
+    }
+
+    const savedTheme =
+        localStorage.getItem("careerLift-theme");
+
+    if (savedTheme === "dark") {
+        body.classList.add("dark-mode");
+    }
+
+    const savedDirection =
+        localStorage.getItem("careerLift-direction") || "ltr";
+
+    html.setAttribute(
+        "dir",
+        savedDirection
+    );
+
+    navItems.forEach(item => {
+
+        item.addEventListener("click", () => {
+
+            const pageName =
+                item.dataset.page;
+
+            openPage(pageName);
+        });
+
+    });
+
+    document.querySelectorAll("[data-open-page]").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const pageName =
+                button.dataset.openPage;
+
+            openPage(pageName);
+        });
+
+    });
+
+    document.querySelectorAll("[data-profile-page]").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const pageName =
+                button.dataset.profilePage;
+
+            openPage(pageName);
+        });
+
+    });
+
+    menuToggle?.addEventListener("click", () => {
+
+        const isOpen =
+            sidebar.classList.contains("open");
+
+        if (isOpen) {
+            closeSidebar();
+        } else {
+            openSidebar();
+        }
+
+    });
+
+    overlay?.addEventListener("click", closeSidebar);
+
+    profileButton?.addEventListener(
+        "click",
+        event => {
+            event.stopPropagation();
+            toggleProfileDropdown();
+        }
+    );
+
+    document.addEventListener("click", event => {
+
+        if (
+            profileDropdown &&
+            !profileDropdown.contains(event.target) &&
+            !profileButton.contains(event.target)
+        ) {
+            closeProfileDropdown();
+        }
+
+    });
+
+    themeToggle?.addEventListener("click", () => {
+
+        body.classList.toggle("dark-mode");
+
+        localStorage.setItem(
+            "careerLift-theme",
+            body.classList.contains("dark-mode")
+                ? "dark"
+                : "light"
+        );
+
+        updateThemeIcon();
+    });
+
+    directionToggle?.addEventListener("click", () => {
+
+        const currentDirection =
+            html.getAttribute("dir") || "ltr";
+
+        const newDirection =
+            currentDirection === "ltr"
+                ? "rtl"
+                : "ltr";
+
+        html.setAttribute(
+            "dir",
+            newDirection
+        );
+
+        localStorage.setItem(
+            "careerLift-direction",
+            newDirection
+        );
+
+        updateDirectionIcon();
+    });
+
+    notificationButton?.addEventListener(
+        "click",
+        () => openPage("notifications")
+    );
+
+    logoutButton?.addEventListener(
+        "click",
+        logout
+    );
+
+    profileLogout?.addEventListener(
+        "click",
+        logout
+    );
+
+    window.addEventListener("resize", () => {
+
+        if (window.innerWidth > 900) {
+            closeSidebar();
+        }
+
+    });
+
+    updateThemeIcon();
+    updateDirectionIcon();
+    refreshIcons();
+
+});
+</script>
+
+</body>
+</html>

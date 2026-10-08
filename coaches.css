@@ -1,0 +1,1920 @@
+.home-section-tag {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--primary);
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.careerlyn-coaches-hero {
+    position: relative;
+    padding: 50px 0;
+    background: var(--bg-color);
+    overflow: hidden;
+}
+
+.careerlyn-coaches-hero-container {
+    width: min(var(--container-width), calc(100% - 48px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.careerlyn-coaches-hero-content {
+    max-width: 590px;
+}
+
+.careerlyn-coaches-hero-content h1 {
+    max-width: 620px;
+    margin-bottom: 15px;
+}
+
+.careerlyn-coaches-hero-content h1 span {
+    display: block;
+    color: var(--primary);
+}
+
+.careerlyn-coaches-hero-content p {
+    max-width: 520px;
+    margin-bottom: 12px;
+    font-size: var(--body-lg);
+}
+
+.careerlyn-coaches-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 42px;
+}
+
+.careerlyn-coaches-hero-primary,
+.careerlyn-coaches-hero-secondary {
+    min-height: 52px;
+    padding: 0 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 750;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.careerlyn-coaches-hero-primary {
+    color: #FFFFFF;
+    background: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.careerlyn-coaches-hero-primary:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.careerlyn-coaches-hero-secondary {
+    color: var(--primary);
+    background: transparent;
+    border: 1px solid var(--border-active);
+}
+
+.careerlyn-coaches-hero-secondary:hover {
+    color: #FFFFFF;
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.careerlyn-coaches-hero-actions svg {
+    width: 17px;
+    height: 17px;
+}
+
+.careerlyn-coaches-hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.careerlyn-coaches-hero-trust-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.careerlyn-coaches-hero-trust-item strong {
+    color: var(--heading-color);
+    font-family: var(--font-heading);
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.careerlyn-coaches-hero-trust-item span {
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.careerlyn-coaches-hero-trust-line {
+    width: 1px;
+    height: 35px;
+    background: var(--border-color);
+}
+
+.careerlyn-coaches-hero-visual {
+    position: relative;
+    min-height: 590px;
+}
+
+.careerlyn-coaches-hero-image-main {
+    position: absolute;
+    top: 0;
+    right: 45px;
+    width: 76%;
+    height: 510px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--card-bg);
+}
+
+.careerlyn-coaches-hero-image-main::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 55%,
+        rgba(5, 8, 17, 0.48)
+    );
+}
+
+.careerlyn-coaches-hero-image-main img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.careerlyn-coaches-hero-visual:hover .careerlyn-coaches-hero-image-main img {
+    transform: scale(1.04);
+}
+
+.careerlyn-coaches-hero-image-small {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 43%;
+    height: 225px;
+    padding: 8px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    z-index: 3;
+}
+
+.careerlyn-coaches-hero-image-small img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.careerlyn-coaches-hero-badge {
+    position: absolute;
+    right: 0;
+    bottom: 75px;
+    z-index: 4;
+    min-width: 205px;
+    padding: 15px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+}
+
+.careerlyn-coaches-hero-badge-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: var(--primary-light);
+    border-radius: 50%;
+}
+
+.careerlyn-coaches-hero-badge-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.careerlyn-coaches-hero-badge strong,
+.careerlyn-coaches-hero-badge span {
+    display: block;
+}
+
+.careerlyn-coaches-hero-badge strong {
+    margin-bottom: 3px;
+    color: var(--heading-color);
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.careerlyn-coaches-hero-badge span {
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 10px;
+}
+
+.careerlyn-coaches-hero-number {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    color: #FFFFFF;
+}
+
+.careerlyn-coaches-hero-number span {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.careerlyn-coaches-hero-number strong {
+    font-family: var(--font-heading);
+    font-size: 34px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+[dir="rtl"] .careerlyn-coaches-hero-container,
+body.rtl .careerlyn-coaches-hero-container {
+    direction: rtl;
+}
+
+[dir="rtl"] .careerlyn-coaches-hero-image-main,
+body.rtl .careerlyn-coaches-hero-image-main {
+    right: auto;
+    left: 45px;
+}
+
+[dir="rtl"] .careerlyn-coaches-hero-image-small,
+body.rtl .careerlyn-coaches-hero-image-small {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .careerlyn-coaches-hero-badge,
+body.rtl .careerlyn-coaches-hero-badge {
+    right: auto;
+    left: 0;
+}
+
+[dir="rtl"] .careerlyn-coaches-hero-number,
+body.rtl .careerlyn-coaches-hero-number {
+    left: auto;
+    right: 18px;
+}
+
+@media (max-width: 1024px) {
+    .careerlyn-coaches-hero {
+        padding: 75px 0;
+    }
+
+    .careerlyn-coaches-hero-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 45px;
+    }
+
+    .careerlyn-coaches-hero-visual {
+        min-height: 520px;
+    }
+
+    .careerlyn-coaches-hero-image-main {
+        width: 78%;
+        height: 450px;
+        right: 30px;
+    }
+
+    .careerlyn-coaches-hero-image-small {
+        width: 45%;
+        height: 190px;
+    }
+
+    [dir="rtl"] .careerlyn-coaches-hero-image-main,
+    body.rtl .careerlyn-coaches-hero-image-main {
+        right: auto;
+        left: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .careerlyn-coaches-hero {
+        padding: 65px 0;
+    }
+
+    .careerlyn-coaches-hero-container {
+        width: min(var(--container-width), calc(100% - 36px));
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .careerlyn-coaches-hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .careerlyn-coaches-hero-content h1,
+    .careerlyn-coaches-hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .careerlyn-coaches-hero-actions,
+    .careerlyn-coaches-hero-trust {
+        justify-content: center;
+    }
+
+    .careerlyn-coaches-hero-visual {
+        min-height: 510px;
+        width: min(100%, 650px);
+        margin: 0 auto;
+    }
+
+    .careerlyn-coaches-hero-image-main {
+        right: 35px;
+        width: 78%;
+        height: 430px;
+    }
+
+    .careerlyn-coaches-hero-image-small {
+        width: 43%;
+        height: 185px;
+        bottom: 15px;
+    }
+
+    .careerlyn-coaches-hero-badge {
+        right: 0;
+        bottom: 65px;
+    }
+
+    [dir="rtl"] .careerlyn-coaches-hero-image-main,
+    body.rtl .careerlyn-coaches-hero-image-main {
+        right: auto;
+        left: 35px;
+    }
+
+    [dir="rtl"] .careerlyn-coaches-hero-badge,
+    body.rtl .careerlyn-coaches-hero-badge {
+        right: auto;
+        left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .careerlyn-coaches-hero {
+        padding: 55px 0;
+    }
+
+    .careerlyn-coaches-hero-container {
+        width: min(var(--container-width), calc(100% - 28px));
+        gap: 38px;
+    }
+
+    .careerlyn-coaches-hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .careerlyn-coaches-hero-primary,
+    .careerlyn-coaches-hero-secondary {
+        width: 100%;
+    }
+
+    .careerlyn-coaches-hero-trust {
+        gap: 18px;
+    }
+
+    .careerlyn-coaches-hero-visual {
+        min-height: 390px;
+    }
+
+    .careerlyn-coaches-hero-image-main {
+        top: 0;
+        right: 20px;
+        width: calc(100% - 20px);
+        height: 325px;
+    }
+
+    .careerlyn-coaches-hero-image-small {
+        width: 46%;
+        height: 135px;
+        bottom: 0;
+        padding: 5px;
+    }
+
+    .careerlyn-coaches-hero-badge {
+        right: 0;
+        bottom: 32px;
+        min-width: 175px;
+        padding: 11px 13px;
+    }
+
+    .careerlyn-coaches-hero-badge-icon {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+    }
+
+    .careerlyn-coaches-hero-badge strong {
+        font-size: 10px;
+    }
+
+    .careerlyn-coaches-hero-badge span {
+        font-size: 9px;
+    }
+
+    .careerlyn-coaches-hero-number {
+        top: 12px;
+        left: 12px;
+    }
+
+    .careerlyn-coaches-hero-number strong {
+        font-size: 25px;
+    }
+
+    [dir="rtl"] .careerlyn-coaches-hero-image-main,
+    body.rtl .careerlyn-coaches-hero-image-main {
+        right: auto;
+        left: 20px;
+    }
+
+    [dir="rtl"] .careerlyn-coaches-hero-badge,
+    body.rtl .careerlyn-coaches-hero-badge {
+        right: auto;
+        left: 0;
+    }
+
+    [dir="rtl"] .careerlyn-coaches-hero-number,
+    body.rtl .careerlyn-coaches-hero-number {
+        left: auto;
+        right: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .careerlyn-coaches-hero {
+        padding: 45px 0;
+    }
+
+    .careerlyn-coaches-hero-container {
+        width: calc(100% - 22px);
+    }
+
+    .careerlyn-coaches-hero-trust {
+        gap: 12px;
+    }
+
+    .careerlyn-coaches-hero-trust-item strong {
+        font-size: 20px;
+    }
+
+    .careerlyn-coaches-hero-trust-item span {
+        font-size: 9px;
+    }
+
+    .careerlyn-coaches-hero-visual {
+        min-height: 335px;
+    }
+
+    .careerlyn-coaches-hero-image-main {
+        right: 12px;
+        width: calc(100% - 12px);
+        height: 275px;
+    }
+
+    .careerlyn-coaches-hero-image-small {
+        width: 44%;
+        height: 115px;
+    }
+
+    .careerlyn-coaches-hero-badge {
+        min-width: 145px;
+        bottom: 25px;
+        padding: 8px 10px;
+    }
+
+    .careerlyn-coaches-hero-badge-icon {
+        width: 29px;
+        height: 29px;
+        flex-basis: 29px;
+    }
+
+    .careerlyn-coaches-hero-badge strong {
+        font-size: 9px;
+    }
+
+    .careerlyn-coaches-hero-badge span {
+        font-size: 8px;
+    }
+
+    [dir="rtl"] .careerlyn-coaches-hero-image-main,
+    body.rtl .careerlyn-coaches-hero-image-main {
+        right: auto;
+        left: 12px;
+    }
+}
+
+.careerlyn-coach-expertise {
+    padding: 90px 0;
+    background: var(--bg-color);
+    overflow: hidden;
+}
+
+.careerlyn-coach-expertise-container {
+    width: min(var(--container-width), calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.careerlyn-coach-expertise-header {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 70px;
+    align-items: end;
+    margin-bottom: 50px;
+}
+
+.careerlyn-coach-expertise-header h2 {
+    max-width: 650px;
+}
+
+.careerlyn-coach-expertise-header h2 span {
+    color: var(--primary);
+}
+
+.careerlyn-coach-expertise-header p {
+    max-width: 480px;
+    margin-left: auto;
+}
+
+.careerlyn-coach-expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.careerlyn-coach-card {
+    overflow: hidden;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    transition: var(--transition-fast);
+}
+
+.careerlyn-coach-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.10);
+}
+
+.careerlyn-coach-card-image {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.careerlyn-coach-card-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 48%,
+        rgba(5, 8, 17, 0.72) 100%
+    );
+}
+
+.careerlyn-coach-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: fill;
+    transition: transform 0.7s ease;
+}
+
+.careerlyn-coach-card:hover .careerlyn-coach-card-image img {
+    transform: scale(1.05);
+}
+
+.careerlyn-coach-card-number {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    z-index: 2;
+    color: #FFFFFF;
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.careerlyn-coach-card-specialty {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #FFFFFF;
+}
+
+.careerlyn-coach-card-specialty svg {
+    width: 17px;
+    height: 17px;
+}
+
+.careerlyn-coach-card-specialty span {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.careerlyn-coach-card-content {
+    padding: 25px;
+}
+
+.careerlyn-coach-card-content > div:first-child {
+    margin-bottom: 15px;
+}
+
+.careerlyn-coach-card-role {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--primary);
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.careerlyn-coach-card-content h3 {
+    font-size: 23px;
+}
+
+.careerlyn-coach-card-content p {
+    max-width: 470px;
+    margin-bottom: 20px;
+}
+
+.careerlyn-coach-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.careerlyn-coach-card-tags span {
+    padding: 7px 11px;
+    color: var(--text-light);
+    background: var(--primary-light);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+[dir="rtl"] .careerlyn-coach-expertise-container,
+body.rtl .careerlyn-coach-expertise-container {
+    direction: rtl;
+}
+
+[dir="rtl"] .careerlyn-coach-expertise-header p,
+body.rtl .careerlyn-coach-expertise-header p {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+[dir="rtl"] .careerlyn-coach-card-number,
+body.rtl .careerlyn-coach-card-number {
+    left: auto;
+    right: 20px;
+}
+
+[dir="rtl"] .careerlyn-coach-card-specialty,
+body.rtl .careerlyn-coach-card-specialty {
+    left: auto;
+    right: 20px;
+}
+
+@media (max-width: 1024px) {
+    .careerlyn-coach-expertise {
+        padding: 75px 0;
+    }
+
+    .careerlyn-coach-expertise-header {
+        gap: 40px;
+    }
+
+    .careerlyn-coach-card-image {
+        height: 340px;
+    }
+}
+
+@media (max-width: 768px) {
+    .careerlyn-coach-expertise {
+        padding: 65px 0;
+    }
+
+    .careerlyn-coach-expertise-container {
+        width: min(var(--container-width), calc(100% - 36px));
+    }
+
+    .careerlyn-coach-expertise-header {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        text-align: center;
+    }
+
+    .careerlyn-coach-expertise-header h2,
+    .careerlyn-coach-expertise-header p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .careerlyn-coach-expertise-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .careerlyn-coach-card-image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .careerlyn-coach-expertise {
+        padding: 55px 0;
+    }
+
+    .careerlyn-coach-expertise-container {
+        width: min(var(--container-width), calc(100% - 28px));
+    }
+
+    .careerlyn-coach-expertise-grid {
+        gap: 18px;
+    }
+
+    .careerlyn-coach-card-image {
+        height: 350px;
+    }
+
+    .careerlyn-coach-card-content {
+        padding: 20px;
+    }
+
+    .careerlyn-coach-card-content h3 {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 360px) {
+    .careerlyn-coach-expertise-container {
+        width: calc(100% - 22px);
+    }
+
+    .careerlyn-coach-card-image {
+        height: 300px;
+    }
+
+    .careerlyn-coach-card-number {
+        top: 14px;
+        left: 14px;
+        font-size: 23px;
+    }
+
+    .careerlyn-coach-card-specialty {
+        left: 14px;
+        bottom: 14px;
+    }
+
+    .careerlyn-coach-card-content {
+        padding: 17px;
+    }
+
+    [dir="rtl"] .careerlyn-coach-card-number,
+    body.rtl .careerlyn-coach-card-number {
+        left: auto;
+        right: 14px;
+    }
+
+    [dir="rtl"] .careerlyn-coach-card-specialty,
+    body.rtl .careerlyn-coach-card-specialty {
+        left: auto;
+        right: 14px;
+    }
+}
+
+.careerlyn-coaching-perspective {
+    padding: 90px 0;
+    background: var(--card-bg);
+    overflow: hidden;
+}
+
+.careerlyn-coaching-perspective-container {
+    width: min(var(--container-width), calc(100% - 48px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.careerlyn-coaching-perspective-visual {
+    position: relative;
+    min-height: 610px;
+}
+
+.careerlyn-coaching-perspective-image {
+    position: absolute;
+    inset: 0 35px 45px 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.careerlyn-coaching-perspective-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 50%,
+        rgba(5, 8, 17, 0.48)
+    );
+}
+
+.careerlyn-coaching-perspective-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.careerlyn-coaching-perspective-visual:hover
+.careerlyn-coaching-perspective-image img {
+    transform: scale(1.04);
+}
+
+.careerlyn-coaching-perspective-note {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    width: 285px;
+    padding: 24px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+}
+
+.careerlyn-coaching-perspective-note svg {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    color: var(--primary);
+}
+
+.careerlyn-coaching-perspective-note span {
+    color: var(--heading-color);
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.careerlyn-coaching-perspective-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    color: #FFFFFF;
+}
+
+.careerlyn-coaching-perspective-number span {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.careerlyn-coaching-perspective-number strong {
+    font-family: var(--font-heading);
+    font-size: 34px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.careerlyn-coaching-perspective-content {
+    max-width: 610px;
+}
+
+.careerlyn-coaching-perspective-content h2 {
+    margin-bottom: 22px;
+}
+
+.careerlyn-coaching-perspective-content h2 span {
+    display: block;
+    color: var(--primary);
+}
+
+.careerlyn-coaching-perspective-lead {
+    max-width: 570px;
+    margin-bottom: 34px;
+    font-size: var(--body-lg);
+}
+
+.careerlyn-coaching-perspective-points {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--border-color);
+}
+
+.careerlyn-coaching-perspective-point {
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    gap: 18px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.careerlyn-coaching-perspective-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: var(--primary-light);
+    border-radius: 7px;
+}
+
+.careerlyn-coaching-perspective-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.careerlyn-coaching-perspective-point h3 {
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+.careerlyn-coaching-perspective-point p {
+    max-width: 500px;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.careerlyn-coaching-perspective-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 30px;
+    color: var(--primary);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.careerlyn-coaching-perspective-link:hover {
+    color: var(--primary-dark);
+    gap: 13px;
+}
+
+.careerlyn-coaching-perspective-link svg {
+    width: 17px;
+    height: 17px;
+}
+
+[dir="rtl"] .careerlyn-coaching-perspective-container,
+body.rtl .careerlyn-coaching-perspective-container {
+    direction: rtl;
+}
+
+[dir="rtl"] .careerlyn-coaching-perspective-image,
+body.rtl .careerlyn-coaching-perspective-image {
+    inset: 0 0 45px 35px;
+}
+
+[dir="rtl"] .careerlyn-coaching-perspective-note,
+body.rtl .careerlyn-coaching-perspective-note {
+    right: auto;
+    left: 0;
+}
+
+[dir="rtl"] .careerlyn-coaching-perspective-number,
+body.rtl .careerlyn-coaching-perspective-number {
+    left: auto;
+    right: 20px;
+}
+
+@media (max-width: 1024px) {
+    .careerlyn-coaching-perspective {
+        padding: 75px 0;
+    }
+
+    .careerlyn-coaching-perspective-container {
+        gap: 50px;
+    }
+
+    .careerlyn-coaching-perspective-visual {
+        min-height: 530px;
+    }
+
+    .careerlyn-coaching-perspective-image {
+        inset: 0 25px 40px 0;
+    }
+
+    .careerlyn-coaching-perspective-note {
+        width: 250px;
+    }
+
+    [dir="rtl"] .careerlyn-coaching-perspective-image,
+    body.rtl .careerlyn-coaching-perspective-image {
+        inset: 0 0 40px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .careerlyn-coaching-perspective {
+        padding: 65px 0;
+    }
+
+    .careerlyn-coaching-perspective-container {
+        width: min(var(--container-width), calc(100% - 36px));
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .careerlyn-coaching-perspective-visual {
+        min-height: 500px;
+        width: min(100%, 620px);
+        margin: 0 auto;
+    }
+
+    .careerlyn-coaching-perspective-content {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .careerlyn-coaching-perspective-content h2 {
+        text-align: center;
+    }
+
+    .careerlyn-coaching-perspective-content h2 span {
+        display: inline;
+    }
+
+    .careerlyn-coaching-perspective-lead {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .careerlyn-coaching-perspective-link {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .careerlyn-coaching-perspective {
+        padding: 55px 0;
+    }
+
+    .careerlyn-coaching-perspective-container {
+        width: min(var(--container-width), calc(100% - 28px));
+        gap: 42px;
+    }
+
+    .careerlyn-coaching-perspective-visual {
+        min-height: 400px;
+    }
+
+    .careerlyn-coaching-perspective-image {
+        inset: 0 15px 35px 0;
+    }
+
+    .careerlyn-coaching-perspective-note {
+        width: 220px;
+        padding: 17px;
+    }
+
+    .careerlyn-coaching-perspective-note span {
+        font-size: 11px;
+    }
+
+    .careerlyn-coaching-perspective-number {
+        top: 14px;
+        left: 14px;
+    }
+
+    .careerlyn-coaching-perspective-number strong {
+        font-size: 27px;
+    }
+
+    .careerlyn-coaching-perspective-point {
+        grid-template-columns: 40px 1fr;
+        gap: 13px;
+        padding: 18px 0;
+    }
+
+    .careerlyn-coaching-perspective-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .careerlyn-coaching-perspective-point h3 {
+        font-size: 15px;
+    }
+
+    .careerlyn-coaching-perspective-point p {
+        font-size: 12px;
+    }
+
+    [dir="rtl"] .careerlyn-coaching-perspective-image,
+    body.rtl .careerlyn-coaching-perspective-image {
+        inset: 0 0 35px 15px;
+    }
+
+    [dir="rtl"] .careerlyn-coaching-perspective-number,
+    body.rtl .careerlyn-coaching-perspective-number {
+        left: auto;
+        right: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .careerlyn-coaching-perspective-container {
+        width: calc(100% - 22px);
+    }
+
+    .careerlyn-coaching-perspective-visual {
+        min-height: 350px;
+    }
+
+    .careerlyn-coaching-perspective-image {
+        inset: 0 10px 30px 0;
+    }
+
+    .careerlyn-coaching-perspective-note {
+        width: 190px;
+        padding: 13px;
+    }
+
+    .careerlyn-coaching-perspective-note span {
+        font-size: 10px;
+    }
+
+    [dir="rtl"] .careerlyn-coaching-perspective-image,
+    body.rtl .careerlyn-coaching-perspective-image {
+        inset: 0 0 30px 10px;
+    }
+}
+
+.careerlyn-coaching-journey {
+    padding: 90px 0;
+    background: var(--bg-color);
+    overflow: hidden;
+}
+
+.careerlyn-coaching-journey-container {
+    width: min(var(--container-width), calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.careerlyn-coaching-journey-header {
+    max-width: 760px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.careerlyn-coaching-journey-header h2 {
+    margin-bottom: 20px;
+}
+
+.careerlyn-coaching-journey-header h2 span {
+    color: var(--primary);
+}
+
+.careerlyn-coaching-journey-header p {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.careerlyn-coaching-journey-track {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.careerlyn-coaching-journey-track::before {
+    content: "";
+    position: absolute;
+    top: 175px;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: var(--border-color);
+    z-index: 0;
+}
+
+.careerlyn-coaching-journey-step {
+    position: relative;
+    z-index: 1;
+}
+
+.careerlyn-coaching-journey-visual {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 9px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+.careerlyn-coaching-journey-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 45%,
+        rgba(5, 8, 17, 0.58)
+    );
+}
+
+.careerlyn-coaching-journey-visual img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.65s ease;
+}
+
+.careerlyn-coaching-journey-step:hover
+.careerlyn-coaching-journey-visual img {
+    transform: scale(1.06);
+}
+
+.careerlyn-coaching-journey-visual > span {
+    position: absolute;
+    right: 17px;
+    bottom: 15px;
+    z-index: 2;
+    color: #FFFFFF;
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.careerlyn-coaching-journey-content {
+    padding: 25px 5px 0;
+}
+
+.careerlyn-coaching-journey-content > span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.careerlyn-coaching-journey-content h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.careerlyn-coaching-journey-content p {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+[dir="rtl"] .careerlyn-coaching-journey-container,
+body.rtl .careerlyn-coaching-journey-container {
+    direction: rtl;
+}
+
+[dir="rtl"] .careerlyn-coaching-journey-visual > span,
+body.rtl .careerlyn-coaching-journey-visual > span {
+    right: auto;
+    left: 17px;
+}
+
+@media (max-width: 1024px) {
+    .careerlyn-coaching-journey {
+        padding: 75px 0;
+    }
+
+    .careerlyn-coaching-journey-track {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 22px;
+    }
+
+    .careerlyn-coaching-journey-track::before {
+        display: none;
+    }
+
+    .careerlyn-coaching-journey-visual {
+        height: 330px;
+    }
+}
+
+@media (max-width: 768px) {
+    .careerlyn-coaching-journey {
+        padding: 65px 0;
+    }
+
+    .careerlyn-coaching-journey-container {
+        width: min(var(--container-width), calc(100% - 36px));
+    }
+
+    .careerlyn-coaching-journey-header {
+        margin-bottom: 40px;
+    }
+
+    .careerlyn-coaching-journey-track {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+        margin: 0 auto;
+        gap: 35px;
+    }
+
+    .careerlyn-coaching-journey-visual {
+        height: 380px;
+    }
+
+    .careerlyn-coaching-journey-content {
+        padding-top: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .careerlyn-coaching-journey {
+        padding: 55px 0;
+    }
+
+    .careerlyn-coaching-journey-container {
+        width: min(var(--container-width), calc(100% - 28px));
+    }
+
+    .careerlyn-coaching-journey-track {
+        gap: 30px;
+    }
+
+    .careerlyn-coaching-journey-visual {
+        height: 330px;
+    }
+
+    .careerlyn-coaching-journey-visual > span {
+        font-size: 24px;
+        right: 14px;
+        bottom: 13px;
+    }
+
+    .careerlyn-coaching-journey-content h3 {
+        font-size: 17px;
+    }
+
+    .careerlyn-coaching-journey-content p {
+        font-size: 12px;
+    }
+
+    [dir="rtl"] .careerlyn-coaching-journey-visual > span,
+    body.rtl .careerlyn-coaching-journey-visual > span {
+        right: auto;
+        left: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .careerlyn-coaching-journey-container {
+        width: calc(100% - 22px);
+    }
+
+    .careerlyn-coaching-journey-visual {
+        height: 285px;
+    }
+
+    .careerlyn-coaching-journey-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.careerlyn-coach-credibility {
+    padding: 90px 0;
+    background: var(--card-bg);
+    overflow: hidden;
+}
+
+.careerlyn-coach-credibility-container {
+    width: min(var(--container-width), calc(100% - 48px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.careerlyn-coach-credibility-visual {
+    position: relative;
+    min-height: 560px;
+}
+
+.careerlyn-coach-credibility-image {
+    position: absolute;
+    inset: 0 55px 45px 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.careerlyn-coach-credibility-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.careerlyn-coach-credibility-visual:hover
+.careerlyn-coach-credibility-image img {
+    transform: scale(1.04);
+}
+
+.careerlyn-coach-credibility-card {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 275px;
+    padding: 25px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.14);
+}
+
+.careerlyn-coach-credibility-card span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.careerlyn-coach-credibility-card strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--heading-color);
+    font-family: var(--font-heading);
+    font-size: 46px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.careerlyn-coach-credibility-card p {
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.careerlyn-coach-credibility-content {
+    max-width: 620px;
+}
+
+.careerlyn-coach-credibility-content h2 {
+    margin-bottom: 22px;
+}
+
+.careerlyn-coach-credibility-content h2 span {
+    display: block;
+    color: var(--primary);
+}
+
+.careerlyn-coach-credibility-lead {
+    max-width: 560px;
+    margin-bottom: 35px;
+    font-size: var(--body-lg);
+}
+
+.careerlyn-coach-credibility-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 30px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.careerlyn-coach-credibility-stat {
+    padding: 22px 15px;
+    border-right: 1px solid var(--border-color);
+}
+
+.careerlyn-coach-credibility-stat:last-child {
+    border-right: 0;
+}
+
+.careerlyn-coach-credibility-stat strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.careerlyn-coach-credibility-stat span {
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 650;
+}
+
+.careerlyn-coach-credibility-points {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.careerlyn-coach-credibility-points div {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.careerlyn-coach-credibility-points svg {
+    width: 17px;
+    height: 17px;
+    flex: 0 0 17px;
+    color: var(--primary);
+}
+
+.careerlyn-coach-credibility-points span {
+    color: var(--heading-color);
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.careerlyn-coach-credibility-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--primary);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.careerlyn-coach-credibility-link:hover {
+    color: var(--primary-dark);
+    gap: 13px;
+}
+
+.careerlyn-coach-credibility-link svg {
+    width: 17px;
+    height: 17px;
+}
+
+[dir="rtl"] .careerlyn-coach-credibility-container,
+body.rtl .careerlyn-coach-credibility-container {
+    direction: rtl;
+}
+
+[dir="rtl"] .careerlyn-coach-credibility-image,
+body.rtl .careerlyn-coach-credibility-image {
+    inset: 0 0 45px 55px;
+}
+
+[dir="rtl"] .careerlyn-coach-credibility-card,
+body.rtl .careerlyn-coach-credibility-card {
+    right: auto;
+    left: 0;
+}
+
+[dir="rtl"] .careerlyn-coach-credibility-stat {
+    border-right: 0;
+    border-left: 1px solid var(--border-color);
+}
+
+[dir="rtl"] .careerlyn-coach-credibility-stat:last-child {
+    border-left: 0;
+}
+
+@media (max-width: 1024px) {
+    .careerlyn-coach-credibility {
+        padding: 75px 0;
+    }
+
+    .careerlyn-coach-credibility-container {
+        gap: 50px;
+    }
+
+    .careerlyn-coach-credibility-visual {
+        min-height: 500px;
+    }
+
+    .careerlyn-coach-credibility-image {
+        inset: 0 35px 40px 0;
+    }
+
+    .careerlyn-coach-credibility-card {
+        width: 235px;
+        padding: 20px;
+    }
+
+    [dir="rtl"] .careerlyn-coach-credibility-image,
+    body.rtl .careerlyn-coach-credibility-image {
+        inset: 0 0 40px 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .careerlyn-coach-credibility {
+        padding: 65px 0;
+    }
+
+    .careerlyn-coach-credibility-container {
+        width: min(var(--container-width), calc(100% - 36px));
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .careerlyn-coach-credibility-visual {
+        width: min(100%, 620px);
+        margin: 0 auto;
+        min-height: 500px;
+    }
+
+    .careerlyn-coach-credibility-content {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .careerlyn-coach-credibility-content h2 {
+        text-align: center;
+    }
+
+    .careerlyn-coach-credibility-lead {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .careerlyn-coach-credibility {
+        padding: 55px 0;
+    }
+
+    .careerlyn-coach-credibility-container {
+        width: min(var(--container-width), calc(100% - 28px));
+        gap: 42px;
+    }
+
+    .careerlyn-coach-credibility-visual {
+        min-height: 400px;
+    }
+
+    .careerlyn-coach-credibility-image {
+        inset: 0 18px 35px 0;
+    }
+
+    .careerlyn-coach-credibility-card {
+        width: 210px;
+        padding: 16px;
+    }
+
+    .careerlyn-coach-credibility-card strong {
+        font-size: 36px;
+    }
+
+    .careerlyn-coach-credibility-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .careerlyn-coach-credibility-stat {
+        padding: 16px 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .careerlyn-coach-credibility-stat:last-child {
+        border-bottom: 0;
+    }
+
+    [dir="rtl"] .careerlyn-coach-credibility-image,
+    body.rtl .careerlyn-coach-credibility-image {
+        inset: 0 0 35px 18px;
+    }
+
+    [dir="rtl"] .careerlyn-coach-credibility-stat {
+        border-left: 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .careerlyn-coach-credibility-container {
+        width: calc(100% - 22px);
+    }
+
+    .careerlyn-coach-credibility-visual {
+        min-height: 350px;
+    }
+
+    .careerlyn-coach-credibility-image {
+        inset: 0 10px 30px 0;
+    }
+
+    .careerlyn-coach-credibility-card {
+        width: 185px;
+        padding: 13px;
+    }
+
+    .careerlyn-coach-credibility-card strong {
+        font-size: 31px;
+    }
+
+    [dir="rtl"] .careerlyn-coach-credibility-image,
+    body.rtl .careerlyn-coach-credibility-image {
+        inset: 0 0 30px 10px;
+    }
+}
+
+.careerlyn-simple-cta {
+    padding: 40px 0;
+    background: var(--bg-color);
+    direction: ltr;
+}
+
+.careerlyn-simple-cta-container {
+    width: min(900px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 30px 40px;
+    text-align: center;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+.careerlyn-simple-cta-container .home-section-tag {
+    margin-bottom: 18px;
+}
+
+.careerlyn-simple-cta-container h2 {
+    max-width: 760px;
+    margin: 0 auto 20px;
+}
+
+.careerlyn-simple-cta-container h2 span {
+    display: block;
+    color: var(--primary);
+}
+
+.careerlyn-simple-cta-container p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.careerlyn-simple-cta-button {
+    min-height: 50px;
+    padding: 0 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    color: #FFFFFF;
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 750;
+    transition: var(--transition-fast);
+    border-radius: 10px;
+}
+
+.careerlyn-simple-cta-button:hover {
+    color: #FFFFFF;
+    background: var(--secondary);
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.careerlyn-simple-cta-button i {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.22s ease;
+}
+
+.careerlyn-simple-cta-button:hover i {
+    transform: translate(3px, -3px);
+}
+
+[dir="rtl"] .careerlyn-simple-cta,
+body.rtl .careerlyn-simple-cta {
+    direction: rtl;
+}
+
+[dir="rtl"] .careerlyn-simple-cta-button:hover i,
+body.rtl .careerlyn-simple-cta-button:hover i {
+    transform: translate(-3px, -3px);
+}
+
+@media (max-width: 768px) {
+    .careerlyn-simple-cta {
+        padding: 70px 0;
+    }
+
+    .careerlyn-simple-cta-container {
+        width: calc(100% - 32px);
+        padding: 55px 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .careerlyn-simple-cta {
+        padding: 55px 0;
+    }
+
+    .careerlyn-simple-cta-container {
+        width: calc(100% - 24px);
+        padding: 45px 20px;
+    }
+
+    .careerlyn-simple-cta-container h2 {
+        font-size: 34px;
+    }
+
+    .careerlyn-simple-cta-container p {
+        margin-bottom: 25px;
+    }
+
+    .careerlyn-simple-cta-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .careerlyn-simple-cta-container {
+        width: calc(100% - 20px);
+        padding: 38px 16px;
+    }
+
+    .careerlyn-simple-cta-container h2 {
+        font-size: 30px;
+    }
+}
